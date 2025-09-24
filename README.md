@@ -6,7 +6,6 @@
 
 <p align="center">
   <a href="#introduction">Introduction</a> •
-  <a href="#development-guide">Development Guide</a> •
   <a href="#screenshots">Screenshots</a> •
   <a href="#developer-contact-information">Developer Contact Information</a>
 </p>
@@ -20,17 +19,27 @@ This application is designed to help players of PUBG (PlayerUnknown's Battlegrou
 - You can compare two different players' match data.
 
 > [!Note]  
-  This application does not run in real time; it only displays match history data retrieved from the PUBG API.
+  This application does **not** run in real time; it only displays match history data retrieved from the PUBG API.
 
+### ⚙️**Installation <a name="installation"></a>**
+
+1. Go to the [releases](https://github.com/Ctere1/pubgSS/releases) page and download the latest version.
+2. Extract the downloaded archive and navigate to the extracted folder.
+3. Run the application:
+
+    - Double-click `PUBG.Stream.Sniping.Detector.Setup.exe`.
+    - Follow the installation prompts to complete the setup.
+  
+4. After installation, you can launch the application from your desktop or start menu.
 
 ## 📸**Screenshots <a name="screenshots"></a>** 
 
 - The following screenshots show the application's interface and features.
 
- |                              |                              |
- | ---------------------------- | ---------------------------- |
- | ![_1](./screenshots/ss1.png) | ![_2](./screenshots/ss2.png) |
- | ![_3](./screenshots/ss3.png) | ![_4](./screenshots/ss4.png) |
+ |                                                |                                                |
+ | :--------------------------------------------: | :--------------------------------------------: |
+ | <img src="./screenshots/ss1.png"  width="150"> | <img src="./screenshots/ss2.png"  width="250"> |
+ | <img src="./screenshots/ss3.png"  width="250"> | <img src="./screenshots/ss4.png"  width="250"> |
 
 
 ### 📜**Developer Contact Information <a name="developer-contact-information"></a>** 
