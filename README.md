@@ -18,7 +18,7 @@ This application is designed to help players of PUBG (PlayerUnknown's Battlegrou
 - You can export the all match data to a PDF file.
 - You can compare two different players' match data.
 
-> [!Note]  
+> [!Important]  
   This application does **not** run in real time; it only displays match history data retrieved from the PUBG API.
 
 ### ⚙️**Installation <a name="installation"></a>**
