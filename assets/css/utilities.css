@@ -1,0 +1,41 @@
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+
+.u-text-center {
+    text-align: center !important;
+}
+
+.u-mt-0 {
+    margin-top: 0 !important;
+}
+
+.u-mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.u-hidden {
+    display: none !important;
+}
+
+.u-inline-block {
+    display: inline-block !important;
+}
+
+.u-shadow-md {
+    box-shadow: var(--shadow-md) !important;
+}
+
+.u-shadow-lg {
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.u-radius-lg {
+    border-radius: var(--radius-lg) !important;
+}
+
+.u-maxw-600 {
+    max-width: 600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
