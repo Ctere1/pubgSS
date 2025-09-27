@@ -48,5 +48,5 @@ This application is designed to help players of PUBG (PlayerUnknown's Battlegrou
 
 ### 📜**Developer Contact Information <a name="developer-contact-information"></a>** 
 
-<a href = "mailto:cemiltan1999@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<a href = "mailto:cemiltan896@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
 <a href = "https://github.com/Ctere1"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a>
