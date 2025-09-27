@@ -24,13 +24,17 @@ This application is designed to help players of PUBG (PlayerUnknown's Battlegrou
 ### ⚙️**Installation <a name="installation"></a>**
 
 1. Go to the [releases](https://github.com/Ctere1/pubgSS/releases) page and download the latest version.
-2. Extract the downloaded archive and navigate to the extracted folder.
-3. Run the application:
+2. Run the application:
 
     - Double-click `PUBG.Stream.Sniping.Detector.Setup.exe`.
     - Follow the installation prompts to complete the setup.
   
-4. After installation, you can launch the application from your desktop or start menu.
+3. After installation, you can launch the application from your desktop or start menu.
+
+> [!Note]  
+ > Demo account is provided for testing purposes. You can use the following credentials:  
+  > Username: `demo@ss-detector.com`  
+  > Password: `Wu9LYm2W5pgyyPuRgCMi`  
 
 ## 📸**Screenshots <a name="screenshots"></a>** 
 
