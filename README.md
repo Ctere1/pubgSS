@@ -1,7 +1,5 @@
 <h1 align="center">
    PUBG Stream Sniping Detector
-   
-   ![Electron.js](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white)
 </h1>
 
 <p align="center">
@@ -31,11 +29,6 @@ This application is designed to help players of PUBG (PlayerUnknown's Battlegrou
   
 3. After installation, you can launch the application from your desktop or start menu.
 
-> [!Note]  
- > Demo account is provided for testing purposes. You can use the following credentials:  
-  > Username: `demo@ss-detector.com`  
-  > Password: `Wu9LYm2W5pgyyPuRgCMi`  
-
 ## 📸**Screenshots <a name="screenshots"></a>** 
 
 - The following screenshots show the application's interface and features.
@@ -45,6 +38,8 @@ This application is designed to help players of PUBG (PlayerUnknown's Battlegrou
  | <img src="./screenshots/ss1.png"  width="150"> | <img src="./screenshots/ss2.png"  width="250"> |
  | <img src="./screenshots/ss3.png"  width="250"> | <img src="./screenshots/ss4.png"  width="250"> |
 
+> [!Important]  
+  The screenshots are outdated and may not reflect the current version of the application. Please refer to the latest version for accurate visuals.
 
 ### 📜**Developer Contact Information <a name="developer-contact-information"></a>** 
 
