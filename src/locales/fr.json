@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "overview": "Aperçu",
+    "installation": "Installation",
+    "screenshots": "Captures",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Analyse de parties PUBG",
+    "title": "Stream Sniping Detector",
+    "lead": "Une application de bureau qui lit votre historique de parties PUBG et met en évidence les schémas derrière un stream sniping suspecté — adversaires récurrents, taux de parties communes et chronologies de proximité.",
+    "download": "Télécharger pour Windows",
+    "sponsor": "Soutenir sur GitHub",
+    "meta": "Application Windows · Aucune installation requise"
+  },
+  "overview": {
+    "eyebrow": "Aperçu",
+    "title": "Lisez l’historique des parties, pas le stream",
+    "lead": "Le stream sniping consiste à regarder la diffusion en direct d’un autre joueur pour obtenir un avantage tactique déloyal. Cela laisse une trace dans l’historique des parties : croiser le même adversaire bien plus souvent que le hasard ne l’expliquerait. Cet outil rend cette trace mesurable.",
+    "noteTitle": "Pas en temps réel.",
+    "noteText": "L’application ne suit aucune partie en cours : elle lit uniquement les données des parties terminées via l’API officielle de PUBG."
+  },
+  "features": {
+    "json": {
+      "title": "Export JSON",
+      "text": "Exportez l’intégralité des données structurées des parties pour vos propres analyses."
+    },
+    "pdf": {
+      "title": "Rapports PDF",
+      "text": "Générez des synthèses analytiques imprimables pour documenter ou fournir des preuves."
+    },
+    "compare": {
+      "title": "Comparaison de joueurs",
+      "text": "Comparez les rencontres récurrentes, les chronologies de proximité et les taux de parties communes de deux joueurs."
+    }
+  },
+  "installation": {
+    "eyebrow": "Installation",
+    "title": "Opérationnel en trois étapes",
+    "lead": "Windows uniquement pour l’instant — une prise en charge de macOS pourrait suivre.",
+    "steps": {
+      "download": {
+        "title": "Téléchargez la dernière version",
+        "body": "Récupérez la version la plus récente sur la page GitHub Releases.",
+        "action": "Ouvrir les Releases"
+      },
+      "run": {
+        "title": "Lancez l’application",
+        "body": "Double-cliquez sur l’exécutable — aucune installation requise."
+      },
+      "analyse": {
+        "title": "Commencez l’analyse",
+        "body": "Saisissez un nom de joueur pour charger son historique récent et examiner les recoupements."
+      }
+    }
+  },
+  "screenshots": {
+    "eyebrow": "Captures d’écran",
+    "title": "Un aperçu de l’interface",
+    "lead": "Cliquez sur une capture pour l’afficher en grand.",
+    "shots": {
+      "login": { "caption": "Connexion", "alt": "Écran de connexion de l’application" },
+      "dashboard": { "caption": "Tableau de bord", "alt": "Tableau de bord principal avec l’historique des parties" },
+      "analysis": { "caption": "Métriques d’analyse", "alt": "Vue des résultats et des métriques d’analyse" },
+      "comparison": { "caption": "Comparaison de joueurs", "alt": "Vue de comparaison de joueurs côte à côte" }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Retours et problèmes",
+    "lead": "Une demande de fonctionnalité, une idée d’amélioration ou un bug à signaler ? Écrivez-moi.",
+    "github": "GitHub",
+    "email": "E-mail"
+  },
+  "footer": {
+    "copyright": "© {{year}} Stream Sniping Detector",
+    "builtBy": "Développé par",
+    "github": "GitHub",
+    "releases": "Versions",
+    "sponsor": "Soutenir"
+  },
+  "a11y": {
+    "skip": "Aller au contenu principal",
+    "sections": "Sections",
+    "footerNav": "Pied de page",
+    "themeToLight": "Passer au thème clair",
+    "themeToDark": "Passer au thème sombre",
+    "sponsor": "Soutenir le projet sur GitHub",
+    "closeViewer": "Fermer la visionneuse",
+    "language": "Langue"
+  }
+}

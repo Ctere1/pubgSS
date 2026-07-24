@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "overview": "Resumen",
+    "installation": "Instalación",
+    "screenshots": "Capturas",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "eyebrow": "Análisis de partidas de PUBG",
+    "title": "Stream Sniping Detector",
+    "lead": "Una aplicación de escritorio que lee tu historial de partidas de PUBG y revela los patrones detrás del posible stream sniping: rivales recurrentes, tasas de coincidencia en partidas y cronologías de proximidad.",
+    "download": "Descargar para Windows",
+    "sponsor": "Patrocinar en GitHub",
+    "meta": "Aplicación de escritorio para Windows · Sin instalación"
+  },
+  "overview": {
+    "eyebrow": "Resumen",
+    "title": "Lee el historial de partidas, no el stream",
+    "lead": "El stream sniping consiste en ver la transmisión en directo de otro jugador para obtener una ventaja táctica injusta. Hacerlo deja un rastro en el historial de partidas: coincidir con el mismo rival mucho más a menudo de lo que explicaría el azar. Esta herramienta convierte ese rastro en algo medible.",
+    "noteTitle": "No funciona en tiempo real.",
+    "noteText": "La aplicación no sigue partidas en curso: solo lee datos de partidas finalizadas a través de la API oficial de PUBG."
+  },
+  "features": {
+    "json": {
+      "title": "Exportación JSON",
+      "text": "Exporta todo el conjunto estructurado de datos de partidas para analizarlo con tus propias herramientas."
+    },
+    "pdf": {
+      "title": "Informes PDF",
+      "text": "Genera resúmenes analíticos imprimibles para documentación o para presentar pruebas."
+    },
+    "compare": {
+      "title": "Comparación de jugadores",
+      "text": "Compara los encuentros recurrentes, las cronologías de proximidad y las tasas de coincidencia de dos jugadores."
+    }
+  },
+  "installation": {
+    "eyebrow": "Instalación",
+    "title": "Listo en tres pasos",
+    "lead": "Por ahora solo Windows: puede que llegue compatibilidad con macOS.",
+    "steps": {
+      "download": {
+        "title": "Descarga la última versión",
+        "body": "Consigue la compilación más reciente en la página de GitHub Releases.",
+        "action": "Abrir Releases"
+      },
+      "run": {
+        "title": "Ejecuta la aplicación",
+        "body": "Haz doble clic en el ejecutable: no requiere instalación."
+      },
+      "analyse": {
+        "title": "Empieza a analizar",
+        "body": "Introduce el nombre de un jugador para cargar su historial reciente y revisar las coincidencias."
+      }
+    }
+  },
+  "screenshots": {
+    "eyebrow": "Capturas",
+    "title": "Un vistazo a la interfaz",
+    "lead": "Haz clic en cualquier captura para verla a tamaño completo.",
+    "shots": {
+      "login": { "caption": "Inicio de sesión", "alt": "Pantalla de inicio de sesión de la aplicación" },
+      "dashboard": { "caption": "Panel", "alt": "Panel principal con el historial de partidas" },
+      "analysis": { "caption": "Métricas de análisis", "alt": "Vista de resultados y métricas del análisis" },
+      "comparison": { "caption": "Comparación de jugadores", "alt": "Vista de comparación de jugadores en paralelo" }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Comentarios y problemas",
+    "lead": "¿Tienes una petición de función, una idea de mejora o un error que informar? Escríbeme.",
+    "github": "GitHub",
+    "email": "Correo"
+  },
+  "footer": {
+    "copyright": "© {{year}} Stream Sniping Detector",
+    "builtBy": "Creado por",
+    "github": "GitHub",
+    "releases": "Versiones",
+    "sponsor": "Patrocinar"
+  },
+  "a11y": {
+    "skip": "Ir al contenido principal",
+    "sections": "Secciones",
+    "footerNav": "Pie de página",
+    "themeToLight": "Cambiar al tema claro",
+    "themeToDark": "Cambiar al tema oscuro",
+    "sponsor": "Patrocinar el proyecto en GitHub",
+    "closeViewer": "Cerrar el visor",
+    "language": "Idioma"
+  }
+}

@@ -1,0 +1,55 @@
+import { useEffect, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
+import { CloseIcon } from './Icons.jsx'
+
+/**
+ * Full-screen screenshot viewer. Closes on Escape and on backdrop click,
+ * locks page scroll while open, moves focus to the close button on open and
+ * hands it back to the thumbnail that opened it.
+ */
+export function Lightbox({ src, alt, caption, onClose }) {
+  const { t } = useTranslation()
+  const closeRef = useRef(null)
+
+  useEffect(() => {
+    closeRef.current?.focus()
+
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') onClose()
+    }
+    document.addEventListener('keydown', onKeyDown)
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.removeEventListener('keydown', onKeyDown)
+      document.body.style.overflow = previousOverflow
+    }
+  }, [onClose])
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={caption}
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose()
+      }}
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-4 bg-black/85 p-4 backdrop-blur-sm sm:p-8"
+    >
+      <button
+        ref={closeRef}
+        type="button"
+        onClick={onClose}
+        aria-label={t('a11y.closeViewer')}
+        className="absolute right-4 top-4 grid size-10 place-items-center rounded-lg text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+      >
+        <CloseIcon width="20" height="20" />
+      </button>
+
+      <img src={src} alt={alt} className="max-h-[82vh] w-auto max-w-full rounded-lg" />
+      <p className="text-xs tracking-wide text-white/70">{caption}</p>
+    </div>
+  )
+}

@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "overview": "개요",
+    "installation": "설치",
+    "screenshots": "스크린샷",
+    "contact": "문의"
+  },
+  "hero": {
+    "eyebrow": "PUBG 매치 분석",
+    "title": "Stream Sniping Detector",
+    "lead": "PUBG 매치 기록을 읽어 스트림 스나이핑이 의심되는 패턴을 드러내는 데스크톱 도구입니다 — 반복되는 상대, 매치 중복률, 근접 타임라인.",
+    "download": "Windows용 다운로드",
+    "sponsor": "GitHub에서 후원하기",
+    "meta": "Windows 데스크톱 앱 · 설치 불필요"
+  },
+  "overview": {
+    "eyebrow": "개요",
+    "title": "스트림이 아니라 매치 기록을 읽으세요",
+    "lead": "스트림 스나이핑은 부당한 전술적 이점을 얻기 위해 다른 플레이어의 실시간 방송을 시청하는 행위입니다. 이런 행위는 매치 기록에 흔적을 남깁니다 — 우연으로는 설명할 수 없을 만큼 같은 상대와 자주 만나는 것입니다. 이 도구는 그 흔적을 측정 가능하게 만듭니다.",
+    "noteTitle": "실시간이 아닙니다.",
+    "noteText": "이 애플리케이션은 진행 중인 매치를 추적하지 않습니다. 공식 PUBG API를 통해 종료된 매치의 데이터만 읽습니다."
+  },
+  "features": {
+    "json": {
+      "title": "JSON 내보내기",
+      "text": "구조화된 전체 매치 데이터를 내보내 원하는 도구로 분석하세요."
+    },
+    "pdf": {
+      "title": "PDF 보고서",
+      "text": "문서화나 증거 제출을 위한 인쇄 가능한 분석 요약을 생성합니다."
+    },
+    "compare": {
+      "title": "플레이어 비교",
+      "text": "두 플레이어의 반복 조우, 근접 타임라인, 매치 중복률을 비교합니다."
+    }
+  },
+  "installation": {
+    "eyebrow": "설치",
+    "title": "세 단계로 시작하기",
+    "lead": "현재는 Windows만 지원합니다 — macOS 지원은 추후 추가될 수 있습니다.",
+    "steps": {
+      "download": {
+        "title": "최신 릴리스 다운로드",
+        "body": "GitHub Releases 페이지에서 최신 빌드를 받으세요.",
+        "action": "릴리스 열기"
+      },
+      "run": {
+        "title": "애플리케이션 실행",
+        "body": "실행 파일을 두 번 클릭하세요 — 설치가 필요 없습니다."
+      },
+      "analyse": {
+        "title": "분석 시작",
+        "body": "플레이어 이름을 입력해 최근 매치 기록을 불러오고 중복을 확인하세요."
+      }
+    }
+  },
+  "screenshots": {
+    "eyebrow": "스크린샷",
+    "title": "인터페이스 살펴보기",
+    "lead": "스크린샷을 클릭하면 원본 크기로 볼 수 있습니다.",
+    "shots": {
+      "login": { "caption": "로그인", "alt": "애플리케이션 로그인 화면" },
+      "dashboard": { "caption": "대시보드", "alt": "매치 기록이 표시된 메인 대시보드" },
+      "analysis": { "caption": "분석 지표", "alt": "분석 결과 및 지표 화면" },
+      "comparison": { "caption": "플레이어 비교", "alt": "플레이어를 나란히 비교하는 화면" }
+    }
+  },
+  "contact": {
+    "eyebrow": "문의",
+    "title": "피드백 및 문제 제보",
+    "lead": "기능 요청, 개선 아이디어, 버그 제보가 있으면 언제든 연락해 주세요.",
+    "github": "GitHub",
+    "email": "이메일"
+  },
+  "footer": {
+    "copyright": "© {{year}} Stream Sniping Detector",
+    "builtBy": "제작:",
+    "github": "GitHub",
+    "releases": "릴리스",
+    "sponsor": "후원"
+  },
+  "a11y": {
+    "skip": "본문으로 건너뛰기",
+    "sections": "섹션",
+    "footerNav": "푸터",
+    "themeToLight": "라이트 테마로 전환",
+    "themeToDark": "다크 테마로 전환",
+    "sponsor": "GitHub에서 프로젝트 후원",
+    "closeViewer": "뷰어 닫기",
+    "language": "언어"
+  }
+}

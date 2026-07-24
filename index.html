@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" class="no-js">
+<html lang="en">
 <head>
-    <!-- =========================================================
-         META / SEO / SOCIAL
-    ========================================================== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-    <meta name="description" content="PUBG Stream Sniping Detector - Professional analysis tool to investigate potential stream sniping patterns using PUBG match history data. JSON export, PDF reports, player comparison and more." />
+
+    <title>PUBG Stream Sniping Detector</title>
+    <meta name="description" content="Desktop tool to investigate potential stream sniping patterns in PUBG match history. JSON export, PDF reports and player comparison." />
     <meta name="keywords" content="PUBG, stream sniping, detector, analytics, esports, player comparison, match analysis" />
     <meta name="author" content="Ctere1" />
     <meta name="color-scheme" content="light dark" />
@@ -14,60 +13,46 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="PUBG Stream Sniping Detector" />
-    <meta property="og:description" content="Advanced professional tool for detecting potential stream sniper patterns using PUBG match history data." />
+    <meta property="og:description" content="Desktop tool to investigate potential stream sniping patterns using PUBG match history data." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ctere1.github.io/pubgSS/" />
+    <meta property="og:image" content="https://ctere1.github.io/pubgSS/screenshots/ss2.png" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PUBG Stream Sniping Detector" />
-    <meta name="twitter:description" content="Advanced analysis for potential stream sniping signals in PUBG." />
+    <meta name="twitter:description" content="Desktop tool to investigate potential stream sniping patterns in PUBG." />
+    <meta name="twitter:image" content="https://ctere1.github.io/pubgSS/screenshots/ss2.png" />
 
-    <!-- Dynamic theme-color (JS ile güncellenecek) -->
-    <meta name="theme-color" content="#0d4d91" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0d1216" media="(prefers-color-scheme: dark)">
-    <meta name="theme-color" id="dynamic-theme-color" content="#0d4d91">
+    <meta name="theme-color" id="theme-color-meta" content="#ffffff" />
 
-    <title>PUBG Stream Sniping Detector</title>
+    <!-- Icons are generated from brand/app-icon-1024.png (see README).
+         Paths must NOT include the base: Vite prefixes it in dev and build,
+         so writing it here yields /pubgSS/pubgSS/... and a 404. -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-    <!-- Icons -->
-    <link rel="icon" type="image/png" sizes="256x256" href="./assets/app-icon-256.png">
-    <!-- (Opsiyonel: manifest & apple touch) -->
-    <!-- <link rel="manifest" href="/favicon/site.webmanifest"> -->
-
-    <!-- Preconnect (Fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Font (Inter Variable) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-
-    <!-- Base & Theme Styles -->
-    <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/theme.css" />
-    <link rel="stylesheet" href="assets/css/components.css" />
-    <link rel="stylesheet" href="assets/css/utilities.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
 
     <script>
-        // Remove no-js class early
-        document.documentElement.classList.remove('no-js');
-
-        // Inline early theme application (avoid FOUC)
-        (function() {
-            const KEY = 'pubgss-theme-preference';
-            const stored = localStorage.getItem(KEY);
-            if (stored && ['light','dark'].includes(stored)) {
-                document.documentElement.setAttribute('data-theme', stored);
-            } else {
-                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.documentElement.setAttribute('data-theme','dark');
-                }
-            }
+        // Apply the stored theme before first paint to avoid a flash of the wrong theme.
+        // Must stay in sync with src/hooks/useTheme.js (same storage key).
+        (function () {
+            try {
+                var stored = localStorage.getItem('pubgss-theme-preference');
+                var dark = stored === 'dark' ||
+                    (stored !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) document.documentElement.classList.add('dark');
+                var meta = document.getElementById('theme-color-meta');
+                if (meta) meta.setAttribute('content', dark ? '#0b0f14' : '#ffffff');
+            } catch (e) { /* localStorage unavailable — fall back to light */ }
         })();
     </script>
 
-    <!-- Structured Data (SoftwareApplication) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -75,7 +60,7 @@
       "name": "PUBG Stream Sniping Detector",
       "operatingSystem": "Windows",
       "applicationCategory": "Utility",
-      "description": "Advanced analysis tool to investigate potential stream sniping patterns in PUBG using match history.",
+      "description": "Analysis tool to investigate potential stream sniping patterns in PUBG using match history.",
       "softwareVersion": "1.0.0",
       "author": { "@type": "Person", "name": "Ctere1" },
       "publisher": { "@type": "Organization", "name": "Ctere1" },
@@ -84,238 +69,7 @@
     </script>
 </head>
 <body>
-    <!-- =========================================================
-         ACCESSIBILITY: SKIP LINK
-    ========================================================== -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <!-- =========================================================
-         THEME PICKER (Light / Dark / Auto)
-    ========================================================== -->
-    <div class="theme-picker" data-component="theme-picker">
-        <button id="themeMenuButton" class="theme-picker__button" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu">
-            <span class="theme-picker__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4 12H2m20 0h-2m-.222-7.777l-2.222 2.031M4.222 4.223l2.222 2.031m0 11.302l-2.222 2.222m15.556-.001l-2.222-2.222"/></g></svg></span>
-            <span class="theme-picker__label">Theme</span>
-        </button>
-        <div id="themeMenu" class="theme-picker__menu" role="menu" aria-label="Theme menu">
-            <button role="menuitemradio" aria-checked="false" data-theme-value="light">Light</button>
-            <button role="menuitemradio" aria-checked="false" data-theme-value="dark">Dark</button>
-            <button role="menuitemradio" aria-checked="true" data-theme-value="auto">Auto (System)</button>
-        </div>
-    </div>
-
-    <!-- =========================================================
-         HEADER (Original content preserved)
-    ========================================================== -->
-    <header class="site-header" role="banner">
-        <div class="site-header__bg-layer"></div>
-        <div class="site-header__decor site-header__decor--one"></div>
-        <div class="site-header__decor site-header__decor--two"></div>
-        <div class="site-header__inner container">
-            <div class="site-header__content">
-                <h1 class="fade-in site-header__title">
-                  <img src="./assets/app-icon-256.png" alt="PUBG" class="site-header__logo">
-                  Stream Sniping Detector
-                </h1>
-                <p class="fade-in site-header__tagline">Advanced tool for detecting potential stream snipers in PUBG matches</p>
-                <div class="fade-in electron-badge">
-                    <img src="https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white" alt="Electron framework badge" decoding="async">
-                </div>
-                <!-- <div class="site-header__cta-group fade-in">
-                    <a href="#download" class="btn btn--primary btn--lg">Download</a>
-                    <a href="https://github.com/Ctere1/pubgSS" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">GitHub Repo</a>
-                </div> -->
-            </div>
-        </div>
-    </header>
-
-    <!-- =========================================================
-         NAVIGATION
-    ========================================================== -->
-    <nav class="main-nav" aria-label="Primary">
-        <div class="main-nav__inner container">
-            <ul class="main-nav__list" role="list">
-                <li><a href="#introduction" class="main-nav__link" data-nav>Introduction</a></li>
-                <li><a href="#installation" class="main-nav__link" data-nav>Installation</a></li>
-                <li><a href="#screenshots" class="main-nav__link" data-nav>Screenshots</a></li>
-                <li><a href="#download" class="main-nav__link" data-nav>Download</a></li>
-                <li><a href="#contact" class="main-nav__link" data-nav>Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- =========================================================
-         MAIN CONTENT
-    ========================================================== -->
-    <main id="main-content">
-        <!-- INTRODUCTION -->
-        <section id="introduction" class="section" aria-labelledby="heading-intro">
-            <div class="container">
-                <h2 class="section__title reveal" id="heading-intro">ℹ️ Introduction</h2>
-                <div class="intro-content reveal">
-                    <p>This application helps PUBG (PlayerUnknown's Battlegrounds) players analyze historical match data to detect potential stream sniping behavior. Stream sniping occurs when a player watches a live broadcast to gain an unfair tactical advantage.</p>
-                </div>
-
-                <div class="feature-grid">
-                    <article class="feature-card reveal" aria-label="JSON Export feature">
-                        <div class="feature-card__icon">📊</div>
-                        <h3 class="feature-card__title">JSON Export</h3>
-                        <p class="feature-card__text">Export the complete structured match dataset for external inspection or custom tooling.</p>
-                    </article>
-
-                    <article class="feature-card reveal" aria-label="PDF Reports feature">
-                        <div class="feature-card__icon">📄</div>
-                        <h3 class="feature-card__title">PDF Reports</h3>
-                        <p class="feature-card__text">Generate polished, printable analytical summaries for documentation or evidence submission.</p>
-                    </article>
-
-                    <article class="feature-card reveal" aria-label="Player Comparison feature">
-                        <div class="feature-card__icon">⚖️</div>
-                        <h3 class="feature-card__title">Player Comparison</h3>
-                        <p class="feature-card__text">Compare two distinct players' recurrence patterns, proximity timelines and match overlap rates.</p>
-                    </article>
-                </div>
-
-                <div class="notice notice--warning reveal" data-icon="⚠️" role="note">
-                    <strong>Important:</strong> This application does <strong>not</strong> run in real time. It only displays historical match data from the official PUBG API.
-                </div>
-            </div>
-        </section>
-
-        <!-- INSTALLATION -->
-        <section id="installation" class="section section--alt" aria-labelledby="heading-install">
-            <div class="container">
-                <h2 class="section__title reveal" id="heading-install">⚙️ Installation</h2>
-                <ol class="steps" role="list">
-                    <li class="step reveal">
-                        <div class="step__number">1</div>
-                        <div class="step__body">
-                            <h3 class="step__title">Download Latest Release</h3>
-                            <p>Visit the <a href="https://github.com/Ctere1/pubgSS/releases" target="_blank" rel="noopener">Releases</a> page and get the most recent version.</p>
-                        </div>
-                    </li>
-                    <li class="step reveal">
-                        <div class="step__number">2</div>
-                        <div class="step__body">
-                            <h3 class="step__title">Run Installer</h3>
-                            <p>Execute <code>PUBG.Stream.Sniping.Detector.Setup.exe</code> and follow the guided installation steps.</p>
-                        </div>
-                    </li>
-                    <li class="step reveal">
-                        <div class="step__number">3</div>
-                        <div class="step__body">
-                            <h3 class="step__title">Start Using</h3>
-                            <p>Launch via the desktop shortcut or start menu once setup completes.</p>
-                        </div>
-                    </li>
-                </ol>
-
-                <div class="notice notice--info reveal" data-icon="💡" role="note">
-                    <strong>Demo Account:</strong><br>
-                    Username: <code>demo@ss-detector.com</code><br>
-                    Password: <code>Wu9LYm2W5pgyyPuRgCMi</code>
-                </div>
-            </div>
-        </section>
-
-        <!-- SCREENSHOTS -->
-        <section id="screenshots" class="section" aria-labelledby="heading-shots">
-            <div class="container">
-                <h2 class="section__title reveal" id="heading-shots">📸 Screenshots</h2>
-                  <div class="media-grid">
-                    <figure class="media-card reveal" tabindex="0">
-                        <div class="media-card__img-wrap">
-                            <img src="./screenshots/ss1.png" alt="Login screen interface" loading="lazy" decoding="async">
-                        </div>
-                        <figcaption class="media-card__caption">Login / Authentication</figcaption>
-                    </figure>
-
-                    <figure class="media-card reveal" tabindex="0">
-                        <div class="media-card__img-wrap">
-                            <img src="./screenshots/ss2.png" alt="Main dashboard interface" loading="lazy" decoding="async">
-                        </div>
-                        <figcaption class="media-card__caption">Dashboard Overview</figcaption>
-                    </figure>
-
-                    <figure class="media-card reveal" tabindex="0">
-                        <div class="media-card__img-wrap">
-                            <img src="./screenshots/ss3.png" alt="Analysis results view" loading="lazy" decoding="async">
-                        </div>
-                        <figcaption class="media-card__caption">Analysis Metrics</figcaption>
-                    </figure>
-
-                    <figure class="media-card reveal" tabindex="0">
-                        <div class="media-card__img-wrap">
-                            <img src="./screenshots/ss4.png" alt="Player comparison side-by-side view" loading="lazy" decoding="async">
-                        </div>
-                        <figcaption class="media-card__caption">Player Comparison</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <!-- DOWNLOAD -->
-        <section id="download" class="section section--alt" aria-labelledby="heading-download">
-            <div class="container">
-                <h2 class="section__title reveal" id="heading-download">🚀 Download Now</h2>
-                <div class="cta-panel reveal">
-                    <p class="cta-panel__lead">Get the latest build of PUBG Stream Sniping Detector and begin auditing match overlaps.</p>
-                    <div class="cta-panel__actions">
-                        <a class="btn btn--accent btn--xl" href="https://github.com/Ctere1/pubgSS/releases" target="_blank" rel="noopener">
-                            <span class="btn__icon" aria-hidden="true">📥</span>
-                            <span>Latest Release</span>
-                        </a>
-                    </div>
-                    <p class="cta-panel__meta">Available for Windows</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="section" aria-labelledby="heading-contact">
-            <div class="container">
-                <h2 class="section__title reveal" id="heading-contact">📜 Developer Contact</h2>
-                <div class="contact-box reveal">
-                    <p>Have a feature request, improvement idea, or encountered an issue? Reach out anytime.</p>
-                    <div class="contact-links">
-                        <a href="https://github.com/Ctere1" class="contact-link" target="_blank" rel="noopener" aria-label="GitHub Profile">
-                            <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub badge" loading="lazy">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- (Optional) FUTURE: Statistics / FAQ / Roadmap sections -->
-    </main>
-
-    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Screenshot viewer">
-        <div class="lightbox__img-wrapper">
-          <button class="lightbox__close" type="button" data-close>
-            ✕ Close
-          </button>
-          <img src="" alt="" id="lightboxImg" decoding="async">
-          <p id="lightboxCaption" style="margin:.9rem 0 0; font-size:.85rem; text-align:center; color:#fff; letter-spacing:.5px; opacity:.85;"></p>
-        </div>
-    </div>
-
-    <!-- =========================================================
-         FOOTER
-    ========================================================== -->
-    <footer class="site-footer" role="contentinfo">
-        <div class="container site-footer__inner">
-            <p>&copy; 2025 PUBG Stream Sniping Detector. All rights reserved.</p>
-            <p>
-                <a href="https://github.com/Ctere1/pubgSS" target="_blank" rel="noopener">View on GitHub</a> •
-                Built by <a href="https://github.com/Ctere1" target="_blank" rel="noopener">Ctere1</a>
-            </p>
-        </div>
-    </footer>
-
-    <!-- =========================================================
-         SCRIPTS (defer)
-    ========================================================== -->
-    <script src="assets/js/theme.js" defer></script>
-    <script src="assets/js/app.js" defer></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>

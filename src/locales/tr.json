@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "overview": "Genel Bakış",
+    "installation": "Kurulum",
+    "screenshots": "Ekran Görüntüleri",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "eyebrow": "PUBG maç analizi",
+    "title": "Stream Sniping Detector",
+    "lead": "PUBG maç geçmişinizi okuyup şüpheli stream sniping davranışının izlerini ortaya çıkaran bir masaüstü uygulaması — tekrar eden rakipler, maç örtüşme oranları ve yakınlık zaman çizelgeleri.",
+    "download": "Windows için indir",
+    "sponsor": "GitHub'da destekle",
+    "meta": "Windows masaüstü uygulaması · Kurulum gerekmez"
+  },
+  "overview": {
+    "eyebrow": "Genel Bakış",
+    "title": "Yayını değil, maç geçmişini oku",
+    "lead": "Stream sniping, bir oyuncunun haksız taktik avantaj elde etmek için başkasının canlı yayınını izlemesidir. Bunu yapan kişi maç geçmişinde iz bırakır: aynı rakiple, rastlantının açıklayacağından çok daha sık eşleşmek. Bu uygulama o izi ölçülebilir hâle getirir.",
+    "noteTitle": "Gerçek zamanlı değildir.",
+    "noteText": "Uygulama devam eden maçları izlemez; yalnızca resmi PUBG API'si üzerinden tamamlanmış maçların verilerini okur."
+  },
+  "features": {
+    "json": {
+      "title": "JSON Aktarımı",
+      "text": "Yapılandırılmış maç verisinin tamamını dışa aktarıp kendi araçlarınızla inceleyin."
+    },
+    "pdf": {
+      "title": "PDF Raporları",
+      "text": "Belgelendirme veya kanıt sunumu için yazdırılabilir analiz özetleri oluşturun."
+    },
+    "compare": {
+      "title": "Oyuncu Karşılaştırma",
+      "text": "İki oyuncunun tekrar eden karşılaşmalarını, yakınlık zaman çizelgelerini ve maç örtüşme oranlarını karşılaştırın."
+    }
+  },
+  "installation": {
+    "eyebrow": "Kurulum",
+    "title": "Üç adımda hazır",
+    "lead": "Şu an yalnızca Windows destekleniyor; macOS desteği ileride gelebilir.",
+    "steps": {
+      "download": {
+        "title": "Son sürümü indirin",
+        "body": "En güncel derlemeyi GitHub Releases sayfasından alın.",
+        "action": "Releases'i aç"
+      },
+      "run": {
+        "title": "Uygulamayı çalıştırın",
+        "body": "Çalıştırılabilir dosyaya çift tıklayın — kurulum gerekmez."
+      },
+      "analyse": {
+        "title": "Analize başlayın",
+        "body": "Bir oyuncu adı girerek son maç geçmişini çekin ve örtüşmeleri inceleyin."
+      }
+    }
+  },
+  "screenshots": {
+    "eyebrow": "Ekran Görüntüleri",
+    "title": "Arayüze bir bakış",
+    "lead": "Büyütmek için herhangi bir ekran görüntüsüne tıklayın.",
+    "shots": {
+      "login": { "caption": "Giriş", "alt": "Uygulamanın giriş ekranı" },
+      "dashboard": { "caption": "Panel", "alt": "Maç geçmişini gösteren ana panel" },
+      "analysis": { "caption": "Analiz metrikleri", "alt": "Analiz sonuçları ve metrikler görünümü" },
+      "comparison": { "caption": "Oyuncu karşılaştırması", "alt": "Yan yana oyuncu karşılaştırma görünümü" }
+    }
+  },
+  "contact": {
+    "eyebrow": "İletişim",
+    "title": "Geri bildirim ve sorunlar",
+    "lead": "Bir özellik isteğiniz, iyileştirme fikriniz veya bildirmek istediğiniz bir hata mı var? Bana ulaşın.",
+    "github": "GitHub",
+    "email": "E-posta"
+  },
+  "footer": {
+    "copyright": "© {{year}} Stream Sniping Detector",
+    "builtBy": "Geliştiren:",
+    "github": "GitHub",
+    "releases": "Sürümler",
+    "sponsor": "Destekle"
+  },
+  "a11y": {
+    "skip": "Ana içeriğe geç",
+    "sections": "Bölümler",
+    "footerNav": "Alt bilgi",
+    "themeToLight": "Açık temaya geç",
+    "themeToDark": "Koyu temaya geç",
+    "sponsor": "Projeyi GitHub'da destekle",
+    "closeViewer": "Görüntüleyiciyi kapat",
+    "language": "Dil"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "overview": "Overview",
+    "installation": "Installation",
+    "screenshots": "Screenshots",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "PUBG match analysis",
+    "title": "Stream Sniping Detector",
+    "lead": "A desktop tool that reads your PUBG match history and surfaces the patterns behind suspected stream sniping — recurring opponents, match overlap rates and proximity timelines.",
+    "download": "Download for Windows",
+    "sponsor": "Sponsor on GitHub",
+    "meta": "Windows desktop app · No installation required"
+  },
+  "overview": {
+    "eyebrow": "Overview",
+    "title": "Read the match history, not the stream",
+    "lead": "Stream sniping is when a player watches someone’s live broadcast to gain an unfair tactical advantage. Doing it leaves a trace in the match history: running into the same opponent far more often than chance would explain. This tool makes that trace measurable.",
+    "noteTitle": "Not real time.",
+    "noteText": "The application never follows matches in progress — it only reads data from completed matches through the official PUBG API."
+  },
+  "features": {
+    "json": {
+      "title": "JSON Export",
+      "text": "Export the complete structured match dataset for external inspection or custom tooling."
+    },
+    "pdf": {
+      "title": "PDF Reports",
+      "text": "Generate printable analytical summaries for documentation or evidence submission."
+    },
+    "compare": {
+      "title": "Player Comparison",
+      "text": "Compare two players’ recurring encounters, proximity timelines and match overlap rates."
+    }
+  },
+  "installation": {
+    "eyebrow": "Installation",
+    "title": "Up and running in three steps",
+    "lead": "Windows only for now — macOS support may come later.",
+    "steps": {
+      "download": {
+        "title": "Download the latest release",
+        "body": "Grab the most recent build from the GitHub Releases page.",
+        "action": "Open Releases"
+      },
+      "run": {
+        "title": "Run the application",
+        "body": "Double-click the executable — no installation required."
+      },
+      "analyse": {
+        "title": "Start analysing",
+        "body": "Enter a player name to pull their recent match history and inspect the overlaps."
+      }
+    }
+  },
+  "screenshots": {
+    "eyebrow": "Screenshots",
+    "title": "A look at the interface",
+    "lead": "Click any screenshot to view it full size.",
+    "shots": {
+      "login": { "caption": "Login", "alt": "Login screen of the application" },
+      "dashboard": { "caption": "Dashboard", "alt": "Main dashboard with match history" },
+      "analysis": { "caption": "Analysis metrics", "alt": "Analysis results and metrics view" },
+      "comparison": { "caption": "Player comparison", "alt": "Side-by-side player comparison view" }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Feedback and issues",
+    "lead": "Have a feature request, an improvement idea or a bug to report? Get in touch.",
+    "github": "GitHub",
+    "email": "Email"
+  },
+  "footer": {
+    "copyright": "© {{year}} Stream Sniping Detector",
+    "builtBy": "Built by",
+    "github": "GitHub",
+    "releases": "Releases",
+    "sponsor": "Sponsor"
+  },
+  "a11y": {
+    "skip": "Skip to main content",
+    "sections": "Sections",
+    "footerNav": "Footer",
+    "themeToLight": "Switch to light theme",
+    "themeToDark": "Switch to dark theme",
+    "sponsor": "Sponsor the project on GitHub",
+    "closeViewer": "Close viewer",
+    "language": "Language"
+  }
+}

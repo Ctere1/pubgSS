@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/* Dark mode is driven by a `.dark` class on <html> (set by useTheme + the
+   inline script in index.html), not by the media query alone. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------
+   Design tokens — one neutral scale, one accent, hairline borders.
+   --------------------------------------------------------------- */
+:root {
+  --surface: #ffffff;
+  --surface-muted: #f8f9fb;
+  --surface-raised: #ffffff;
+
+  --line: rgb(15 23 42 / 0.09);
+  --line-strong: rgb(15 23 42 / 0.16);
+
+  --ink: #0f1729;
+  --ink-soft: #4a5768;
+  --ink-faint: #778399;
+
+  --accent: #0a7ea4;
+  --accent-soft: rgb(10 126 164 / 0.09);
+
+  /* Primary button: solid ink in light, inverted in dark. */
+  --btn: #0f1729;
+  --btn-hover: #1c2740;
+  --btn-fg: #ffffff;
+}
+
+.dark {
+  --surface: #0b0f14;
+  --surface-muted: #0f151b;
+  --surface-raised: #121921;
+
+  --line: rgb(255 255 255 / 0.10);
+  --line-strong: rgb(255 255 255 / 0.20);
+
+  --ink: #e9eef4;
+  --ink-soft: #a4b2c0;
+  --ink-faint: #7a8998;
+
+  --accent: #4cc4f5;
+  --accent-soft: rgb(76 196 245 / 0.12);
+
+  --btn: #e9eef4;
+  --btn-hover: #ffffff;
+  --btn-fg: #0b0f14;
+}
+
+@theme inline {
+  /* Inter has no Hangul — the CJK fallbacks keep the Korean locale readable. */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Apple SD Gothic Neo", "Malgun Gothic",
+    "Noto Sans KR", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Cascadia Mono",
+    "Roboto Mono", monospace;
+
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-raised: var(--surface-raised);
+
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+
+  --color-btn: var(--btn);
+  --color-btn-hover: var(--btn-hover);
+  --color-btn-fg: var(--btn-fg);
+}
+
+/* ---------------------------------------------------------------
+   Base
+   --------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Sticky header height + breathing room for anchor jumps. */
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--ink-soft);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 0.2rem 0.45rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--accent-soft);
+  }
+}
+
+/* ---------------------------------------------------------------
+   Scroll-in reveal (opacity + small lift only)
+   --------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal[data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------------------------------------------------------------
+   Download button: hovering nudges the arrowhead down once.
+   The lucide icon splits into two paths — stem+tray, then the
+   arrowhead — so only the last path moves.
+   --------------------------------------------------------------- */
+@keyframes arrow-nudge {
+  40% {
+    transform: translateY(2.5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.btn-download:hover .icon-download g > path:last-child {
+  animation: arrow-nudge 480ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn-download:hover .icon-download g > path:last-child {
+    animation: none;
+  }
+
+  .reveal,
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
