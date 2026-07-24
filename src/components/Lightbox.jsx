@@ -7,7 +7,7 @@ import { CloseIcon } from './Icons.jsx'
  * locks page scroll while open, moves focus to the close button on open and
  * hands it back to the thumbnail that opened it.
  */
-export function Lightbox({ src, alt, caption, onClose }) {
+export function Lightbox({ src, alt, caption, width, height, onClose }) {
   const { t } = useTranslation()
   const closeRef = useRef(null)
 
@@ -48,7 +48,13 @@ export function Lightbox({ src, alt, caption, onClose }) {
         <CloseIcon width="20" height="20" />
       </button>
 
-      <img src={src} alt={alt} className="max-h-[82vh] w-auto max-w-full rounded-lg" />
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className="max-h-[82vh] w-auto max-w-full rounded-lg"
+      />
       <p className="text-xs tracking-wide text-white/70">{caption}</p>
     </div>
   )

@@ -61,8 +61,9 @@ export function Hero() {
           <img
             src={preview.src}
             alt={t(`screenshots.shots.${preview.id}.alt`)}
-            width="1280"
-            height="800"
+            width={preview.width}
+            height={preview.height}
+            fetchPriority="high"
             className="w-full"
           />
         </div>

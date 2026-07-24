@@ -1,5 +1,6 @@
 <h1 align="center">
-   PUBG Stream Sniping Detector
+  <img src="./public/favicon-192.png" width="96" height="96" alt=""><br>
+  PUBG Stream Sniping Detector
 </h1>
 
 <p align="center">
@@ -7,7 +8,6 @@
   <a href="#installation">Installation</a> •
   <a href="#support-the-project">Support the Project</a> •
   <a href="#screenshots">Screenshots</a> •
-  <a href="#website">Website</a> •
   <a href="#developer-contact-information">Developer Contact Information</a>
 </p>
 
@@ -52,33 +52,8 @@ Your support helps fund:
 
  |                                           |                                           |
  | :---------------------------------------: | :---------------------------------------: |
- | <img src="./public/screenshots/ss1.png" > | <img src="./public/screenshots/ss2.png" > |
- | <img src="./public/screenshots/ss3.png" > | <img src="./public/screenshots/ss4.png" > |
-
-## 🌐 Website <a name="website"></a>
-
-The landing page in this repository is a React + Vite single page app, styled with
-Tailwind CSS and localised in six languages (EN, TR, DE, FR, ES, KO). It is published
-to GitHub Pages by [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) on
-every push to `master`.
-
-```bash
-npm install     # install dependencies
-npm run dev     # local dev server at http://localhost:5173/pubgSS/
-npm run build   # production build into dist/
-npm run preview # serve the production build
-```
-
-The favicons in `public/` are generated from the master artwork in
-`brand/app-icon-1024.png` (which is not deployed):
-
-```bash
-cd public
-sips -s format png -z 32 32   ../brand/app-icon-1024.png --out favicon-32.png
-sips -s format png -z 192 192 ../brand/app-icon-1024.png --out favicon-192.png
-sips -s format png -z 180 180 ../brand/app-icon-1024.png --out apple-touch-icon.png
-sips -s format png -z 64 64   ../brand/app-icon-1024.png --out icon-64.png
-```
+ | <img src="./brand/screenshots/ss1.png" > | <img src="./brand/screenshots/ss2.png" > |
+ | <img src="./brand/screenshots/ss3.png" > | <img src="./brand/screenshots/ss4.png" > |
 
 ### 📜**Developer Contact Information <a name="developer-contact-information"></a>** 
 

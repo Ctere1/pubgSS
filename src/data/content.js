@@ -2,6 +2,8 @@
  * Structural content only — every user-facing string lives in src/locales/*.json
  * and is looked up by the ids below (e.g. `features.json.title`).
  */
+import shotManifest from 'virtual:screenshots'
+
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`
 
 export const links = {
@@ -23,9 +25,24 @@ export const steps = [
   { id: 'analyse' },
 ]
 
-export const screenshots = [
-  { id: 'login', src: asset('screenshots/ss1.png') },
-  { id: 'dashboard', src: asset('screenshots/ss2.png') },
-  { id: 'analysis', src: asset('screenshots/ss3.png') },
-  { id: 'comparison', src: asset('screenshots/ss4.png') },
-]
+/**
+ * Screenshots come from the screenshots-webp plugin: it converts the masters
+ * in brand/screenshots/ and reports their real dimensions, which each <img>
+ * sets so the layout never shifts while they load.
+ *
+ * To add one: drop the PNG in brand/screenshots/, map its file name to an id
+ * here, and add `screenshots.shots.<id>` strings to every locale.
+ */
+const SHOT_IDS = {
+  ss1: 'login',
+  ss2: 'dashboard',
+  ss3: 'analysis',
+  ss4: 'comparison',
+}
+
+export const screenshots = shotManifest.map((shot) => ({
+  id: SHOT_IDS[shot.name] ?? shot.name,
+  src: asset(shot.file),
+  width: shot.width,
+  height: shot.height,
+}))

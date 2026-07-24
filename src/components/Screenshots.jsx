@@ -40,6 +40,8 @@ export function Screenshots() {
                 <img
                   src={shot.src}
                   alt={t(`screenshots.shots.${shot.id}.alt`)}
+                  width={shot.width}
+                  height={shot.height}
                   loading="lazy"
                   decoding="async"
                   className="w-full transition-transform duration-500 ease-out group-hover:scale-[1.015]"
@@ -57,6 +59,8 @@ export function Screenshots() {
         <Lightbox
           src={open.src}
           alt={t(`screenshots.shots.${open.id}.alt`)}
+          width={open.width}
+          height={open.height}
           caption={t(`screenshots.shots.${open.id}.caption`)}
           onClose={close}
         />
