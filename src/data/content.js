@@ -7,19 +7,33 @@ import shotManifest from 'virtual:screenshots'
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`
 
 export const links = {
-  /**
-   * Serves the executable straight from the newest release — GitHub redirects
-   * `latest/download/<asset>` to whichever tag is current, so this never needs
-   * bumping. It does depend on the asset keeping this exact file name: if a
-   * release ever ships e.g. a version-suffixed binary, this 404s.
-   */
-  download:
-    'https://github.com/Ctere1/pubgSS/releases/latest/download/pubg-stream-sniping-detector.exe',
   releases: 'https://github.com/Ctere1/pubgSS/releases',
   profile: 'https://github.com/Ctere1',
   sponsor: 'https://github.com/sponsors/Ctere1',
   mail: 'mailto:cemiltan896@gmail.com',
 }
+
+/**
+ * The two Windows builds, served straight from the newest release — GitHub
+ * redirects `latest/download/<asset>` to whichever tag is current, so these
+ * never need bumping. They do depend on the assets keeping these exact file
+ * names: rename a release asset and its link 404s.
+ *
+ * `size` is shown next to each button as a picking hint; it is approximate and
+ * only needs a rough refresh when a build's weight changes noticeably.
+ */
+export const downloads = [
+  {
+    id: 'installer',
+    href: 'https://github.com/Ctere1/pubgSS/releases/latest/download/pubg-stream-sniping-detector-amd64-installer.exe',
+    size: '7.4 MB',
+  },
+  {
+    id: 'portable',
+    href: 'https://github.com/Ctere1/pubgSS/releases/latest/download/pubg-stream-sniping-detector-amd64-portable.exe',
+    size: '13.4 MB',
+  },
+]
 
 /** Public, unauthenticated endpoint used for the download counter. */
 export const releasesApi = 'https://api.github.com/repos/Ctere1/pubgSS/releases'
@@ -32,7 +46,7 @@ export const features = ['json', 'pdf', 'compare']
 
 export const steps = [
   { id: 'download', action: links.releases },
-  { id: 'run', code: 'pubg-stream-sniping-detector.exe' },
+  { id: 'run', code: 'pubg-stream-sniping-detector-amd64-portable.exe' },
   { id: 'analyse' },
 ]
 

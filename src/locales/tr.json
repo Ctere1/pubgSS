@@ -10,10 +10,12 @@
     "title": "Stream Sniping Detector",
     "lead": "PUBG maç geçmişinizi okuyup şüpheli stream sniping davranışının izlerini ortaya çıkaran bir masaüstü uygulaması — tekrar eden rakipler, maç örtüşme oranları ve yakınlık zaman çizelgeleri.",
     "download": "Windows için indir",
+    "installer": "Kurulumlu",
+    "portable": "Taşınabilir",
     "sponsor": "GitHub'da destekle",
     "downloads_one": "{{count, number}} indirme",
     "downloads_other": "{{count, number}} indirme",
-    "meta": "Windows masaüstü uygulaması · Kurulum gerekmez"
+    "meta": "Windows masaüstü uygulaması · Kurulumlu veya taşınabilir sürüm"
   },
   "overview": {
     "eyebrow": "Genel Bakış",
@@ -48,7 +50,7 @@
       },
       "run": {
         "title": "Uygulamayı çalıştırın",
-        "body": "Çalıştırılabilir dosyaya çift tıklayın — kurulum gerekmez."
+        "body": "Kurmak için kurulum dosyasını çalıştırın ya da taşınabilir sürüme çift tıklayın — kurulum gerekmez."
       },
       "analyse": {
         "title": "Analize başlayın",

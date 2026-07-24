@@ -10,9 +10,11 @@
     "title": "Stream Sniping Detector",
     "lead": "PUBG 매치 기록을 읽어 스트림 스나이핑이 의심되는 패턴을 드러내는 데스크톱 도구입니다 — 반복되는 상대, 매치 중복률, 근접 타임라인.",
     "download": "Windows용 다운로드",
+    "installer": "설치 파일",
+    "portable": "포터블",
     "sponsor": "GitHub에서 후원하기",
     "downloads_other": "{{count, number}}회 다운로드",
-    "meta": "Windows 데스크톱 앱 · 설치 불필요"
+    "meta": "Windows 데스크톱 앱 · 설치 버전 또는 포터블 버전"
   },
   "overview": {
     "eyebrow": "개요",
@@ -47,7 +49,7 @@
       },
       "run": {
         "title": "애플리케이션 실행",
-        "body": "실행 파일을 두 번 클릭하세요 — 설치가 필요 없습니다."
+        "body": "설정하려면 설치 파일을 실행하거나, 포터블 버전을 두 번 클릭하세요 — 설치가 필요 없습니다."
       },
       "analyse": {
         "title": "분석 시작",

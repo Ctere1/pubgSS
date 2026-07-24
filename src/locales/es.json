@@ -10,10 +10,12 @@
     "title": "Stream Sniping Detector",
     "lead": "Una aplicación de escritorio que lee tu historial de partidas de PUBG y revela los patrones detrás del posible stream sniping: rivales recurrentes, tasas de coincidencia en partidas y cronologías de proximidad.",
     "download": "Descargar para Windows",
+    "installer": "Instalador",
+    "portable": "Portátil",
     "sponsor": "Patrocinar en GitHub",
     "downloads_one": "{{count, number}} descarga",
     "downloads_other": "{{count, number}} descargas",
-    "meta": "Aplicación de escritorio para Windows · Sin instalación"
+    "meta": "Aplicación de escritorio para Windows · Versión con instalador o portátil"
   },
   "overview": {
     "eyebrow": "Resumen",
@@ -48,7 +50,7 @@
       },
       "run": {
         "title": "Ejecuta la aplicación",
-        "body": "Haz doble clic en el ejecutable: no requiere instalación."
+        "body": "Ejecuta el instalador para configurarlo o haz doble clic en la versión portátil: no requiere instalación."
       },
       "analyse": {
         "title": "Empieza a analizar",

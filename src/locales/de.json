@@ -10,10 +10,12 @@
     "title": "Stream Sniping Detector",
     "lead": "Ein Desktop-Tool, das deine PUBG-Matchhistorie ausliest und die Muster hinter vermutetem Stream Sniping sichtbar macht — wiederkehrende Gegner, Match-Überlappungsraten und Näherungsverläufe.",
     "download": "Für Windows herunterladen",
+    "installer": "Installer",
+    "portable": "Portabel",
     "sponsor": "Auf GitHub unterstützen",
     "downloads_one": "{{count, number}} Download",
     "downloads_other": "{{count, number}} Downloads",
-    "meta": "Windows-Desktop-App · Keine Installation nötig"
+    "meta": "Windows-Desktop-App · Installer- oder Portable-Version"
   },
   "overview": {
     "eyebrow": "Überblick",
@@ -48,7 +50,7 @@
       },
       "run": {
         "title": "Anwendung starten",
-        "body": "Doppelklicke auf die ausführbare Datei — keine Installation nötig."
+        "body": "Starte den Installer zur Einrichtung oder doppelklicke auf die Portable-Version — keine Installation nötig."
       },
       "analyse": {
         "title": "Analyse starten",
