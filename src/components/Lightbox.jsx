@@ -1,14 +1,16 @@
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useShotText } from '../hooks/useShotText.js'
 import { CloseIcon } from './Icons.jsx'
 
 /**
  * Full-screen screenshot viewer. Closes on Escape and on backdrop click,
  * locks page scroll while open, moves focus to the close button on open and
- * hands it back to the thumbnail that opened it.
+ * hands it back to the thumbnail that opened it (see useLightbox).
  */
-export function Lightbox({ src, alt, caption, width, height, onClose }) {
+export function Lightbox({ shot, onClose }) {
   const { t } = useTranslation()
+  const { caption, alt } = useShotText(shot)
   const closeRef = useRef(null)
 
   useEffect(() => {
@@ -49,10 +51,10 @@ export function Lightbox({ src, alt, caption, width, height, onClose }) {
       </button>
 
       <img
-        src={src}
+        src={shot.src}
         alt={alt}
-        width={width}
-        height={height}
+        width={shot.width}
+        height={shot.height}
         className="max-h-[82vh] w-auto max-w-full rounded-lg"
       />
       <p className="text-xs tracking-wide text-white/70">{caption}</p>

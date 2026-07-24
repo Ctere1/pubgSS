@@ -22,6 +22,9 @@
   --accent: #0a7ea4;
   --accent-soft: rgb(10 126 164 / 0.09);
 
+  /* Sponsor heart on hover. */
+  --heart: #e11d48;
+
   /* Primary button: solid ink in light, inverted in dark. */
   --btn: #0f1729;
   --btn-hover: #1c2740;
@@ -42,6 +45,8 @@
 
   --accent: #4cc4f5;
   --accent-soft: rgb(76 196 245 / 0.12);
+
+  --heart: #fb7185;
 
   --btn: #e9eef4;
   --btn-hover: #ffffff;
@@ -143,6 +148,31 @@
 .reveal[data-visible="true"] {
   opacity: 1;
   transform: none;
+}
+
+/* ---------------------------------------------------------------
+   Icon behaviour tied to a hovered control. Both idioms live here
+   because they reach inside the lucide markup, which carries
+   fill="none" on the path itself.
+
+   Used by: Hero (download + sponsor buttons), Header (sponsor link).
+   --------------------------------------------------------------- */
+
+/* Sponsor heart: turns red and fills in while its control is hovered. */
+.icon-heart {
+  transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-heart path {
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-sponsor:hover .icon-heart {
+  color: var(--heart);
+}
+
+.btn-sponsor:hover .icon-heart path {
+  fill: currentColor;
 }
 
 /* ---------------------------------------------------------------

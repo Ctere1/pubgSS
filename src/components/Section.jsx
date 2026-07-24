@@ -1,3 +1,4 @@
+import { Eyebrow } from './Eyebrow.jsx'
 import { Reveal } from './Reveal.jsx'
 
 /**
@@ -18,11 +19,7 @@ export function Section({ id, eyebrow, title, lead, muted = false, background, c
       {background}
       <div className="relative mx-auto max-w-5xl px-6 py-20 md:py-28">
         <div className="max-w-2xl">
-          {eyebrow && (
-            <Reveal as="p" className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-              {eyebrow}
-            </Reveal>
-          )}
+          {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
           <Reveal
             as="h2"
             delay={60}

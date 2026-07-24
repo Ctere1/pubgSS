@@ -41,19 +41,26 @@ export function screenshotsWebp({
       return
     }
 
-    const sources = entries.filter((f) => SOURCE_EXT.has(extname(f).toLowerCase())).sort()
-    converted.clear()
+    const sources = entries.filter((f) => SOURCE_EXT.has(extname(f).toLowerCase()))
 
-    await Promise.all(
+    const results = await Promise.all(
       sources.map(async (fileName) => {
         const name = parse(fileName).name
         const input = await readFile(join(sourceDir(), fileName))
         const pipeline = sharp(input)
         const { width, height } = await pipeline.metadata()
         const buffer = await pipeline.webp({ quality, effort }).toBuffer()
-        converted.set(`${name}.webp`, { buffer, width, height })
+        return [`${name}.webp`, { buffer, width, height }]
       }),
     )
+
+    // Conversions finish out of order (small files first), and the manifest
+    // keeps this Map's insertion order — so sort by name, numerically, before
+    // filling it. Replacing the contents in one go also means dev requests
+    // never hit a momentarily empty map.
+    results.sort(([a], [b]) => a.localeCompare(b, 'en', { numeric: true }))
+    converted.clear()
+    for (const [file, entry] of results) converted.set(file, entry)
   }
 
   function manifest() {

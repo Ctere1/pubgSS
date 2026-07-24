@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { steps } from '../data/content.js'
+import { ExternalLink } from './ExternalLink.jsx'
 import { ArrowIcon } from './Icons.jsx'
 import { Reveal } from './Reveal.jsx'
 import { Section } from './Section.jsx'
@@ -38,10 +39,8 @@ export function Installation() {
                 {step.code && <code className="mt-3 inline-block">{step.code}</code>}
 
                 {step.action && (
-                  <a
+                  <ExternalLink
                     href={step.action}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="group mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-accent"
                   >
                     {t(`installation.steps.${step.id}.action`)}
@@ -50,7 +49,7 @@ export function Installation() {
                       height="16"
                       className="transition-transform duration-150 group-hover:translate-x-0.5"
                     />
-                  </a>
+                  </ExternalLink>
                 )}
               </div>
             </Reveal>

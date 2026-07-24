@@ -1,3 +1,5 @@
+import { ExternalLink } from './ExternalLink.jsx'
+
 const base =
   'inline-flex items-center justify-center gap-2 rounded-lg font-medium ' +
   'transition-colors duration-150 whitespace-nowrap'
@@ -12,12 +14,14 @@ const sizes = {
   lg: 'h-12 px-6 text-[15px]',
 }
 
-/** Renders an <a> when `href` is given, otherwise a <button>. */
+/**
+ * Renders a <button>, or a link when `href` is given. An in-page anchor stays
+ * in this tab; anything else goes through ExternalLink.
+ */
 export function Button({
   variant = 'primary',
   size = 'md',
   href,
-  external = false,
   className = '',
   children,
   ...rest
@@ -25,15 +29,11 @@ export function Button({
   const classes = `${base} ${variants[variant]} ${sizes[size]} ${className}`
 
   if (href) {
+    const Link = href.startsWith('#') ? 'a' : ExternalLink
     return (
-      <a
-        href={href}
-        className={classes}
-        {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : null)}
-        {...rest}
-      >
+      <Link href={href} className={classes} {...rest}>
         {children}
-      </a>
+      </Link>
     )
   }
 

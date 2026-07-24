@@ -73,6 +73,7 @@
     "email": "Correo"
   },
   "footer": {
+    "tagline": "Análisis de partidas de PUBG",
     "copyright": "© {{year}} Stream Sniping Detector",
     "builtBy": "Creado por",
     "github": "GitHub",

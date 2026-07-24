@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { appIcon, links, nav } from '../data/content.js'
 import { useActiveSection } from '../hooks/useActiveSection.js'
+import { ExternalLink } from './ExternalLink.jsx'
 import { HeartIcon, MoonIcon, SunIcon } from './Icons.jsx'
 import { LanguageSwitcher } from './LanguageSwitcher.jsx'
 
@@ -25,21 +26,13 @@ export function Header({ theme, onToggleTheme }) {
         <div className="order-2 ml-auto flex items-center gap-0.5 md:order-3 md:ml-0 md:justify-end md:gap-1">
           <LanguageSwitcher />
 
-          <a
+          <ExternalLink
             href={links.sponsor}
-            target="_blank"
-            rel="noopener noreferrer"
             aria-label={t('a11y.sponsor')}
-            className="group grid size-10 place-items-center rounded-lg text-ink-soft transition-colors hover:bg-surface-muted hover:text-rose-500 md:size-9"
+            className="btn-sponsor grid size-10 place-items-center rounded-lg text-ink-soft transition-colors hover:bg-surface-muted md:size-9"
           >
-            {/* The lucide path carries fill="none", so the fill has to be
-                overridden on the path itself, not on the <svg>. */}
-            <HeartIcon
-              width="18"
-              height="18"
-              className="[&_path]:transition-[fill] [&_path]:duration-200 group-hover:[&_path]:fill-current"
-            />
-          </a>
+            <HeartIcon width="18" height="18" className="icon-heart" />
+          </ExternalLink>
 
           <button
             type="button"

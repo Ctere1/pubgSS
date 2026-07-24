@@ -73,6 +73,7 @@
     "email": "E-Mail"
   },
   "footer": {
+    "tagline": "PUBG-Match-Analyse",
     "copyright": "© {{year}} Stream Sniping Detector",
     "builtBy": "Entwickelt von",
     "github": "GitHub",

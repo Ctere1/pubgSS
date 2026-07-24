@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { appIcon, links } from '../data/content.js'
+import { ExternalLink } from './ExternalLink.jsx'
 
 const footerLinks = [
   { key: 'footer.github', href: links.profile },
@@ -19,7 +20,7 @@ export function Footer() {
             <img src={appIcon} alt="" width="32" height="32" className="size-8 rounded-md" />
             <div>
               <p className="text-sm font-semibold tracking-tight">Stream Sniping Detector</p>
-              <p className="mt-1 text-xs text-ink-faint">{t('hero.eyebrow')}</p>
+              <p className="mt-1 text-xs text-ink-faint">{t('footer.tagline')}</p>
             </div>
           </div>
 
@@ -28,16 +29,13 @@ export function Footer() {
             className="flex flex-wrap gap-x-6 gap-y-3 text-xs text-ink-soft"
           >
             {footerLinks.map((link) => (
-              <a
+              <ExternalLink
                 key={link.key}
                 href={link.href}
-                {...(link.href.startsWith('mailto:')
-                  ? null
-                  : { target: '_blank', rel: 'noopener noreferrer' })}
                 className="transition-colors hover:text-ink"
               >
                 {t(link.key)}
-              </a>
+              </ExternalLink>
             ))}
           </nav>
         </div>
@@ -47,14 +45,12 @@ export function Footer() {
 
           <p>
             {t('footer.builtBy')}{' '}
-            <a
+            <ExternalLink
               href={links.profile}
-              target="_blank"
-              rel="noopener noreferrer"
               className="text-ink-soft transition-colors hover:text-ink"
             >
               Ctere1
-            </a>
+            </ExternalLink>
           </p>
         </div>
       </div>

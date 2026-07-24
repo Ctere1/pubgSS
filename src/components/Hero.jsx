@@ -1,12 +1,14 @@
 import { useTranslation } from 'react-i18next'
-import { links, screenshots } from '../data/content.js'
+import { links, previewShot } from '../data/content.js'
+import { useShotText } from '../hooks/useShotText.js'
 import { Button } from './Button.jsx'
+import { Eyebrow } from './Eyebrow.jsx'
 import { DownloadIcon, HeartIcon } from './Icons.jsx'
 import { Reveal } from './Reveal.jsx'
 
 export function Hero() {
   const { t } = useTranslation()
-  const preview = screenshots[1]
+  const preview = useShotText(previewShot)
 
   return (
     <section id="top" className="relative overflow-hidden border-b border-line">
@@ -16,9 +18,7 @@ export function Hero() {
       />
 
       <div className="relative mx-auto max-w-5xl px-6 pt-20 pb-16 text-center md:pt-28">
-        <Reveal as="p" className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-          {t('hero.eyebrow')}
-        </Reveal>
+        <Eyebrow>{t('hero.eyebrow')}</Eyebrow>
 
         <Reveal
           as="h1"
@@ -38,27 +38,17 @@ export function Hero() {
 
         <Reveal delay={180} className="mt-9 flex flex-wrap items-center justify-center gap-3">
           {/* Full width on phones so both stay comfortable tap targets. */}
-          <Button
-            href={links.releases}
-            external
-            size="lg"
-            className="btn-download w-full sm:w-auto"
-          >
+          <Button href={links.releases} size="lg" className="btn-download w-full sm:w-auto">
             <DownloadIcon width="18" height="18" className="icon-download" />
             {t('hero.download')}
           </Button>
           <Button
             href={links.sponsor}
-            external
             size="lg"
             variant="ghost"
-            className="group w-full sm:w-auto"
+            className="btn-sponsor w-full sm:w-auto"
           >
-            <HeartIcon
-              width="18"
-              height="18"
-              className="transition-colors duration-200 group-hover:text-rose-500 [&_path]:transition-[fill] [&_path]:duration-200 group-hover:[&_path]:fill-current"
-            />
+            <HeartIcon width="18" height="18" className="icon-heart" />
             {t('hero.sponsor')}
           </Button>
         </Reveal>
@@ -71,10 +61,10 @@ export function Hero() {
       <Reveal delay={120} className="relative mx-auto max-w-5xl px-6 pb-20">
         <div className="overflow-hidden rounded-xl border border-line bg-surface-raised">
           <img
-            src={preview.src}
-            alt={t(`screenshots.shots.${preview.id}.alt`)}
-            width={preview.width}
-            height={preview.height}
+            src={previewShot.src}
+            alt={preview.alt}
+            width={previewShot.width}
+            height={previewShot.height}
             fetchPriority="high"
             className="w-full"
           />

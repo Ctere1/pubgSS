@@ -19,7 +19,7 @@ export function Contact() {
       background={<Meteors count={20} />}
     >
       <Reveal className="flex flex-wrap gap-3">
-        <Button href={links.profile} external variant="ghost">
+        <Button href={links.profile} variant="ghost">
           <GitHubIcon width="18" height="18" />
           {t('contact.github')}
         </Button>

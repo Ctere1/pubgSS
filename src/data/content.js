@@ -46,3 +46,7 @@ export const screenshots = shotManifest.map((shot) => ({
   width: shot.width,
   height: shot.height,
 }))
+
+/** The dashboard shot doubles as the hero preview — picked by id, not index. */
+export const previewShot =
+  screenshots.find((shot) => shot.id === 'dashboard') ?? screenshots[0]
