@@ -4,13 +4,19 @@ import { Reveal } from './Reveal.jsx'
  * Shared shell for every page section: the anchor id, the content column
  * width and the eyebrow / title / lead heading block.
  */
-export function Section({ id, eyebrow, title, lead, muted = false, children }) {
+export function Section({ id, eyebrow, title, lead, muted = false, background, children }) {
+  const classes = [
+    muted ? 'border-y border-line bg-surface-muted' : '',
+    // A background layer is absolutely positioned and must be clipped.
+    background ? 'relative overflow-hidden' : '',
+  ]
+    .filter(Boolean)
+    .join(' ')
+
   return (
-    <section
-      id={id}
-      className={muted ? 'border-y border-line bg-surface-muted' : undefined}
-    >
-      <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
+    <section id={id} className={classes || undefined}>
+      {background}
+      <div className="relative mx-auto max-w-5xl px-6 py-20 md:py-28">
         <div className="max-w-2xl">
           {eyebrow && (
             <Reveal as="p" className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">

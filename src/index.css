@@ -163,9 +163,57 @@
   animation: arrow-nudge 480ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ---------------------------------------------------------------
+   Meteors (contact section): a dot trailing a fading line, travelling
+   along its own -45deg axis — top right to bottom left. Neutral zinc
+   so it reads on both the light and the dark surface.
+   --------------------------------------------------------------- */
+@keyframes meteor {
+  0% {
+    transform: rotate(-45deg) translateX(0);
+    opacity: 0;
+  }
+  10%,
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translateX(-520px);
+    opacity: 0;
+  }
+}
+
+.meteor {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 9999px;
+  background: #71717a;
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 0.06);
+  transform: rotate(-45deg);
+  animation-name: meteor;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.meteor::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 1px;
+  background: linear-gradient(90deg, #71717a, transparent);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .meteor {
+    display: none;
   }
 
   .btn-download:hover .icon-download g > path:last-child {

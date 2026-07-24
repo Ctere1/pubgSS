@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { links } from '../data/content.js'
 import { Button } from './Button.jsx'
 import { GitHubIcon, MailIcon } from './Icons.jsx'
+import { Meteors } from './Meteors.jsx'
 import { Reveal } from './Reveal.jsx'
 import { Section } from './Section.jsx'
 
@@ -15,6 +16,7 @@ export function Contact() {
       title={t('contact.title')}
       lead={t('contact.lead')}
       muted
+      background={<Meteors count={20} />}
     >
       <Reveal className="flex flex-wrap gap-3">
         <Button href={links.profile} external variant="ghost">
