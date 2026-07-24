@@ -4,6 +4,8 @@
 
 <p align="center">
   <a href="#introduction">Introduction</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#support-the-project">Support the Project</a> •
   <a href="#screenshots">Screenshots</a> •
   <a href="#developer-contact-information">Developer Contact Information</a>
 </p>
@@ -21,25 +23,35 @@ This application is designed to help players of PUBG (PlayerUnknown's Battlegrou
 
 ### ⚙️**Installation <a name="installation"></a>**
 
-1. Go to the [releases](https://github.com/Ctere1/pubgSS/releases) page and download the latest version.
+1. Go to the [Releases](https://github.com/Ctere1/pubgSS/releases) page and download the latest version.
 2. Run the application:
 
-    - Double-click `PUBG.Stream.Sniping.Detector.Setup.exe`.
-    - Follow the installation prompts to complete the setup.
-  
-3. After installation, you can launch the application from your desktop or start menu.
+    - Double-click `pubg-stream-sniping-detector.exe`.
+    - Enter the credentials provided to you.
+
+## ❤️ Support the Project
+
+PUBGSS is developed and maintained in my spare time.
+
+If this project saves you time or improves your experience, please consider sponsoring its development.
+
+Your support helps fund:
+- 🚀 New features
+- 🐛 Bug fixes
+- 📦 Regular updates
+- 🛠️ Long-term maintenance
+
+👉 Sponsor on GitHub: https://github.com/sponsors/Ctere1
 
 ## 📸**Screenshots <a name="screenshots"></a>** 
 
 - The following screenshots show the application's interface and features.
 
- |                                                |                                                |
- | :--------------------------------------------: | :--------------------------------------------: |
- | <img src="./screenshots/ss1.png"  width="150"> | <img src="./screenshots/ss2.png"  width="250"> |
- | <img src="./screenshots/ss3.png"  width="250"> | <img src="./screenshots/ss4.png"  width="250"> |
+ |                                    |                                    |
+ | :--------------------------------: | :--------------------------------: |
+ | <img src="./screenshots/ss1.png" > | <img src="./screenshots/ss2.png" > |
+ | <img src="./screenshots/ss3.png" > | <img src="./screenshots/ss4.png" > |
 
-> [!Important]  
-  The screenshots are outdated and may not reflect the current version of the application. Please refer to the latest version for accurate visuals.
 
 ### 📜**Developer Contact Information <a name="developer-contact-information"></a>** 
 
