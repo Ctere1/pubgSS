@@ -1,0 +1,64 @@
+Copyright (c) 2026 Cemil Tan (Ctere1)
+All rights reserved.
+
+This repository contains the source code of the PUBG Stream Sniping Detector
+website. The application itself is distributed only as a compiled executable
+through GitHub Releases; its source code is not part of this repository and is
+covered by the same terms.
+
+No license or right is granted to use, copy, modify, merge, publish,
+distribute, sublicense or sell any part of this work, in source or binary
+form, except as expressly permitted below.
+
+PERMITTED
+
+  1. Viewing and forking this repository on GitHub, to the extent required by
+     the GitHub Terms of Service.
+  2. Downloading the application and running it for personal, non-commercial
+     use.
+
+NOT PERMITTED WITHOUT PRIOR WRITTEN PERMISSION FROM THE COPYRIGHT HOLDER
+
+  1. Modifying, decompiling, disassembling or reverse engineering the
+     application or the website, or creating derivative works of either.
+  2. Redistributing the application or the website, in whole or in part, by
+     any means, including bundling, mirroring or re-uploading.
+  3. Any commercial use, including selling, licensing or offering either as
+     part of a paid product or service.
+
+DATA SOURCE
+
+  The application reads publicly reachable PUBG match history from third-party
+  services. That data belongs to its respective owners and is displayed inside
+  this software product only; it is not sold, leased, licensed or distributed
+  on a stand-alone basis. This project claims no rights over it and is not
+  affiliated with those services.
+
+THIRD-PARTY COMPONENTS
+
+  The website is built with third-party open source libraries, which remain
+  under their own licenses. Those licenses apply to their respective code
+  only, not to this work. Where those licenses require it, their copyright and
+  permission notices are reproduced in NOTICE.
+
+NO WARRANTY
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+  OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+
+TRADEMARKS
+
+  PUBG and PLAYERUNKNOWN'S BATTLEGROUNDS and all related logos are trademarks
+  of PUBG Corporation or its affiliates. They are used here only to identify
+  the game this software works with.
+
+  This project is independent. Nothing in it is intended to suggest
+  sponsorship or endorsement by PUBG Corporation or its affiliates.
+
+To request permission for anything not listed above, contact the copyright
+holder via https://github.com/Ctere1.

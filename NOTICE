@@ -1,0 +1,60 @@
+THIRD-PARTY NOTICES
+===================
+
+This file lists the third-party components that are shipped to visitors as part
+of the built website, together with the notices their licenses require. Each
+component remains under its own license; the terms in LICENSE do not apply to
+them.
+
+Build-only tooling (Vite, Tailwind CSS, sharp, unplugin-icons and their
+dependencies) is not distributed with the site and is therefore not listed.
+
+
+React, React DOM — MIT License
+Copyright (c) Meta Platforms, Inc. and affiliates.
+https://github.com/facebook/react/blob/main/LICENSE
+
+i18next — MIT License
+Copyright (c) 2025 i18next
+https://github.com/i18next/i18next/blob/master/LICENSE
+
+react-i18next — MIT License
+Copyright (c) 2025 i18next
+https://github.com/i18next/react-i18next/blob/master/LICENSE
+
+i18next-browser-languageDetector — MIT License
+Copyright (c) 2025 i18next
+https://github.com/i18next/i18next-browser-languageDetector/blob/master/LICENSE
+
+  The MIT License grants permission to use, copy, modify, merge, publish,
+  distribute, sublicense and/or sell copies of the software, provided the
+  above copyright notice and this permission notice are included. The software
+  is provided "as is", without warranty of any kind.
+
+Lucide icons — ISC License
+Copyright (c) Lucide Contributors
+https://github.com/lucide-icons/lucide/blob/main/LICENSE
+
+  Icons used in the interface are compiled into the bundle from the Iconify
+  distribution of this set.
+
+Simple Icons (GitHub mark) — CC0 1.0 Universal
+Simple Icons Collaborators
+https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md
+
+Inter typeface — SIL Open Font License 1.1
+Copyright (c) The Inter Project Authors
+Loaded from Google Fonts; not redistributed by this project.
+https://github.com/rsms/inter/blob/master/LICENSE.txt
+
+
+DATA
+----
+
+The application reads PUBG match history from third-party services. That data
+belongs to its respective owners; this project claims no rights over it and is
+not affiliated with, endorsed by or sponsored by those services.
+
+PUBG, PLAYERUNKNOWN'S BATTLEGROUNDS and all related logos are trademarks of
+PUBG Corporation or its affiliates. This project is independent and is not
+affiliated with, endorsed by or sponsored by PUBG Corporation.

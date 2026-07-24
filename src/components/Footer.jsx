@@ -40,7 +40,15 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-line pt-6 text-xs text-ink-faint sm:flex-row sm:items-center sm:justify-between">
+        {/* Trademark attribution and non-endorsement notice. Left in English
+            rather than translated, as such notices conventionally are. */}
+        <p className="mt-10 border-t border-line pt-6 text-[11px] leading-relaxed text-ink-faint">
+          PUBG, PLAYERUNKNOWN&apos;S BATTLEGROUNDS and all related logos are trademarks of
+          PUBG Corporation or its affiliates. This project is independent and is not
+          affiliated with, endorsed by or sponsored by PUBG Corporation.
+        </p>
+
+        <div className="mt-6 flex flex-col gap-2 text-xs text-ink-faint sm:flex-row sm:items-center sm:justify-between">
           <p>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
 
           <p>

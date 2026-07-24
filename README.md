@@ -8,6 +8,7 @@
   <a href="#installation">Installation</a> •
   <a href="#support-the-project">Support the Project</a> •
   <a href="#screenshots">Screenshots</a> •
+  <a href="#license">License</a> •
   <a href="#developer-contact-information">Developer Contact Information</a>
 </p>
 
@@ -54,6 +55,22 @@ Your support helps fund:
  | :---------------------------------------: | :---------------------------------------: |
  | <img src="./brand/screenshots/ss1.png" > | <img src="./brand/screenshots/ss2.png" > |
  | <img src="./brand/screenshots/ss3.png" > | <img src="./brand/screenshots/ss4.png" > |
+
+## ⚖️ License <a name="license"></a>
+
+Copyright © 2026 Cemil Tan (Ctere1). **All rights reserved** — see [LICENSE](LICENSE).
+
+The application is free to download and use for personal, non-commercial purposes.
+Modifying, reverse engineering, redistributing or commercially using the application
+or this website is not permitted without prior written permission.
+
+Match history is read from third-party services; that data belongs to its respective
+owners and this project claims no rights over it. Third-party open source notices are
+listed in [NOTICE](NOTICE).
+
+> PUBG, PLAYERUNKNOWN'S BATTLEGROUNDS and all related logos are trademarks of PUBG
+> Corporation or its affiliates. This project is independent and is not affiliated with,
+> endorsed by or sponsored by PUBG Corporation.
 
 ### 📜**Developer Contact Information <a name="developer-contact-information"></a>** 
 
