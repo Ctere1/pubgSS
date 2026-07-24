@@ -51,10 +51,11 @@ Your support helps fund:
 
 - The following screenshots show the application's interface and features.
 
- |                                           |                                           |
- | :---------------------------------------: | :---------------------------------------: |
+ |                                          |                                          |
+ | :--------------------------------------: | :--------------------------------------: |
  | <img src="./brand/screenshots/ss1.png" > | <img src="./brand/screenshots/ss2.png" > |
  | <img src="./brand/screenshots/ss3.png" > | <img src="./brand/screenshots/ss4.png" > |
+ | <img src="./brand/screenshots/ss5.png" > | <img src="./brand/screenshots/ss6.png" > |
 
 ## ⚖️ License <a name="license"></a>
 

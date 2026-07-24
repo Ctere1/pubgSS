@@ -45,10 +45,12 @@ export const steps = [
  * here, and add `screenshots.shots.<id>` strings to every locale.
  */
 const SHOT_IDS = {
-  ss1: 'login',
-  ss2: 'dashboard',
-  ss3: 'analysis',
+  ss1: 'homepage',
+  ss2: 'scan',
+  ss3: 'results',
   ss4: 'comparison',
+  ss5: 'comparison',
+  ss6: 'support',
 }
 
 export const screenshots = shotManifest.map((shot) => ({
