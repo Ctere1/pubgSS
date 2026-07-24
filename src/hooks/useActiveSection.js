@@ -14,15 +14,33 @@ export function useActiveSection(ids, offset = 96) {
     const list = key.split('|')
     const visible = new Set()
 
+    const resolve = () => {
+      // Topmost section in document order wins.
+      const inBand = list.find((id) => visible.has(id))
+      if (inBand) return inBand
+
+      // Nothing in the band. That is the end of the page: the last section is
+      // short and sits above the footer, so the page runs out of scroll before
+      // it can reach the band and the previous section stayed highlighted for
+      // good. Fall back to the last section that has already started above it.
+      return list.findLast((id) => {
+        const el = document.getElementById(id)
+        return el ? el.getBoundingClientRect().top <= offset : false
+      })
+    }
+
+    const sync = () => {
+      const next = resolve()
+      if (next) setActive(next)
+    }
+
     const io = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) visible.add(entry.target.id)
           else visible.delete(entry.target.id)
         }
-        // Topmost section in document order wins.
-        const next = list.find((id) => visible.has(id))
-        if (next) setActive(next)
+        sync()
       },
       { rootMargin: `-${offset}px 0px -55% 0px`, threshold: 0 },
     )
@@ -31,7 +49,14 @@ export function useActiveSection(ids, offset = 96) {
       const el = document.getElementById(id)
       if (el) io.observe(el)
     }
-    return () => io.disconnect()
+
+    window.addEventListener('scroll', sync, { passive: true })
+    window.addEventListener('resize', sync)
+    return () => {
+      io.disconnect()
+      window.removeEventListener('scroll', sync)
+      window.removeEventListener('resize', sync)
+    }
   }, [key, offset])
 
   return active

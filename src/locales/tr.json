@@ -13,6 +13,7 @@
     "installer": "Kurulumlu",
     "portable": "Taşınabilir",
     "sponsor": "GitHub'da destekle",
+    "latest": "Son sürüm",
     "downloads_one": "{{count, number}} indirme",
     "downloads_other": "{{count, number}} indirme",
     "meta": "Windows masaüstü uygulaması · Kurulumlu veya taşınabilir sürüm"
@@ -79,10 +80,8 @@
   },
   "footer": {
     "tagline": "PUBG maç analizi",
-    "copyright": "© {{year}} Stream Sniping Detector",
-    "builtBy": "Geliştirici:",
+    "copyright": "© {{year}} Stream Sniping Detector",
     "github": "GitHub",
-    "releases": "Sürümler",
     "sponsor": "Destekle"
   },
   "a11y": {

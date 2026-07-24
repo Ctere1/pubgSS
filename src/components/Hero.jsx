@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { links, previewShot } from '../data/content.js'
-import { useDownloadCount } from '../hooks/useDownloadCount.js'
+import { useRelease } from '../hooks/useRelease.js'
 import { useShotText } from '../hooks/useShotText.js'
 import { Button } from './Button.jsx'
 import { DownloadMenu } from './DownloadMenu.jsx'
@@ -11,7 +11,7 @@ import { Reveal } from './Reveal.jsx'
 export function Hero() {
   const { t } = useTranslation()
   const preview = useShotText(previewShot)
-  const downloads = useDownloadCount()
+  const { downloads } = useRelease()
 
   return (
     <section id="top" className="relative overflow-hidden border-b border-line">

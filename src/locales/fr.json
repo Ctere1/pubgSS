@@ -13,6 +13,7 @@
     "installer": "Installateur",
     "portable": "Portable",
     "sponsor": "Soutenir sur GitHub",
+    "latest": "Dernière version",
     "downloads_one": "{{count, number}} téléchargement",
     "downloads_other": "{{count, number}} téléchargements",
     "meta": "Application Windows · Version avec installateur ou portable"
@@ -79,10 +80,8 @@
   },
   "footer": {
     "tagline": "Analyse de parties PUBG",
-    "copyright": "© {{year}} Stream Sniping Detector",
-    "builtBy": "Développé par",
+    "copyright": "© {{year}} Stream Sniping Detector",
     "github": "GitHub",
-    "releases": "Versions",
     "sponsor": "Soutenir"
   },
   "a11y": {

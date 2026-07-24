@@ -1,16 +1,18 @@
 import { useTranslation } from 'react-i18next'
 import { appIcon, links } from '../data/content.js'
+import { useRelease } from '../hooks/useRelease.js'
 import { ExternalLink } from './ExternalLink.jsx'
 
+// Releases and email are left out on purpose: the version chip below already
+// links to the releases page, and the contact section covers email.
 const footerLinks = [
   { key: 'footer.github', href: links.profile },
-  { key: 'footer.releases', href: links.releases },
   { key: 'footer.sponsor', href: links.sponsor },
-  { key: 'contact.email', href: links.mail },
 ]
 
 export function Footer() {
   const { t } = useTranslation()
+  const { version } = useRelease()
 
   return (
     <footer className="border-t border-line">
@@ -51,15 +53,17 @@ export function Footer() {
         <div className="mt-6 flex flex-col gap-2 text-xs text-ink-faint sm:flex-row sm:items-center sm:justify-between">
           <p>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
 
-          <p>
-            {t('footer.builtBy')}{' '}
+          {/* Only once the releases API answers — the tag is not known at build
+              time, since every download link points at `latest`. */}
+          {version && (
             <ExternalLink
-              href={links.profile}
-              className="text-ink-soft transition-colors hover:text-ink"
+              href={links.releases}
+              aria-label={`${t('hero.latest')} ${version}`}
+              className="self-start rounded-md border border-line px-1.5 py-0.5 font-mono text-[11px] tabular-nums transition-colors hover:text-ink sm:self-auto"
             >
-              Ctere1
+              {version}
             </ExternalLink>
-          </p>
+          )}
         </div>
       </div>
     </footer>

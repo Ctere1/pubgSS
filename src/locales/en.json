@@ -13,6 +13,7 @@
     "installer": "Installer",
     "portable": "Portable",
     "sponsor": "Sponsor on GitHub",
+    "latest": "Latest release",
     "downloads_one": "{{count, number}} download",
     "downloads_other": "{{count, number}} downloads",
     "meta": "Windows desktop app · Installer or portable build"
@@ -79,10 +80,8 @@
   },
   "footer": {
     "tagline": "PUBG match analysis",
-    "copyright": "© {{year}} Stream Sniping Detector",
-    "builtBy": "Built by",
+    "copyright": "© {{year}} Stream Sniping Detector",
     "github": "GitHub",
-    "releases": "Releases",
     "sponsor": "Sponsor"
   },
   "a11y": {

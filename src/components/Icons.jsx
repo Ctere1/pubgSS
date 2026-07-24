@@ -6,6 +6,7 @@
 import ArrowLeftRight from '~icons/lucide/arrow-left-right'
 import ArrowRight from '~icons/lucide/arrow-right'
 import Braces from '~icons/lucide/braces'
+import Check from '~icons/lucide/check'
 import ChevronDown from '~icons/lucide/chevron-down'
 import Download from '~icons/lucide/download'
 import Expand from '~icons/lucide/maximize-2'
@@ -20,6 +21,7 @@ import Github from '~icons/simple-icons/github'
 
 export {
   ArrowRight as ArrowIcon,
+  Check as CheckIcon,
   ChevronDown as ChevronDownIcon,
   X as CloseIcon,
   Download as DownloadIcon,
