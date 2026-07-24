@@ -7,6 +7,14 @@ import shotManifest from 'virtual:screenshots'
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`
 
 export const links = {
+  /**
+   * Serves the executable straight from the newest release — GitHub redirects
+   * `latest/download/<asset>` to whichever tag is current, so this never needs
+   * bumping. It does depend on the asset keeping this exact file name: if a
+   * release ever ships e.g. a version-suffixed binary, this 404s.
+   */
+  download:
+    'https://github.com/Ctere1/pubgSS/releases/latest/download/pubg-stream-sniping-detector.exe',
   releases: 'https://github.com/Ctere1/pubgSS/releases',
   profile: 'https://github.com/Ctere1',
   sponsor: 'https://github.com/sponsors/Ctere1',

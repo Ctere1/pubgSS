@@ -38,7 +38,14 @@ export function Hero() {
 
         <Reveal delay={180} className="mt-9 flex flex-wrap items-center justify-center gap-3">
           {/* Full width on phones so both stay comfortable tap targets. */}
-          <Button href={links.releases} size="lg" className="btn-download w-full sm:w-auto">
+          {/* sameTab: the .exe is served as an attachment, so a new tab would
+              open empty and stay there. */}
+          <Button
+            href={links.download}
+            sameTab
+            size="lg"
+            className="btn-download w-full sm:w-auto"
+          >
             <DownloadIcon width="18" height="18" className="icon-download" />
             {t('hero.download')}
           </Button>

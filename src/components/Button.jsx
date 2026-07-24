@@ -22,6 +22,7 @@ export function Button({
   variant = 'primary',
   size = 'md',
   href,
+  sameTab = false,
   className = '',
   children,
   ...rest
@@ -29,11 +30,20 @@ export function Button({
   const classes = `${base} ${variants[variant]} ${sizes[size]} ${className}`
 
   if (href) {
-    const Link = href.startsWith('#') ? 'a' : ExternalLink
+    // In-page anchors are plain <a>; `sameTab` only means something to
+    // ExternalLink, so it is never forwarded to the DOM.
+    if (href.startsWith('#')) {
+      return (
+        <a href={href} className={classes} {...rest}>
+          {children}
+        </a>
+      )
+    }
+
     return (
-      <Link href={href} className={classes} {...rest}>
+      <ExternalLink href={href} sameTab={sameTab} className={classes} {...rest}>
         {children}
-      </Link>
+      </ExternalLink>
     )
   }
 
