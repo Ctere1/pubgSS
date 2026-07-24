@@ -81,8 +81,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* Sticky header height + breathing room for anchor jumps. */
-    scroll-padding-top: 5.5rem;
+    /* Clears the sticky header on anchor jumps. Two rows tall on phones. */
+    scroll-padding-top: 7.5rem;
     -webkit-text-size-adjust: 100%;
   }
 
@@ -120,6 +120,13 @@
 
   ::selection {
     background: var(--accent-soft);
+  }
+
+  /* The header collapses to a single row from md up. */
+  @media (width >= 48rem) {
+    html {
+      scroll-padding-top: 5.5rem;
+    }
   }
 }
 

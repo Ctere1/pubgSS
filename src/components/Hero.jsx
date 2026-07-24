@@ -37,11 +37,23 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={180} className="mt-9 flex flex-wrap items-center justify-center gap-3">
-          <Button href={links.releases} external size="lg" className="btn-download">
+          {/* Full width on phones so both stay comfortable tap targets. */}
+          <Button
+            href={links.releases}
+            external
+            size="lg"
+            className="btn-download w-full sm:w-auto"
+          >
             <DownloadIcon width="18" height="18" className="icon-download" />
             {t('hero.download')}
           </Button>
-          <Button href={links.sponsor} external size="lg" variant="ghost" className="group">
+          <Button
+            href={links.sponsor}
+            external
+            size="lg"
+            variant="ghost"
+            className="group w-full sm:w-auto"
+          >
             <HeartIcon
               width="18"
               height="18"
