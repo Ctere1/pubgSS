@@ -60,10 +60,11 @@
     "title": "인터페이스 살펴보기",
     "lead": "스크린샷을 클릭하면 원본 크기로 볼 수 있습니다.",
     "shots": {
-      "login": { "caption": "로그인", "alt": "애플리케이션 로그인 화면" },
-      "dashboard": { "caption": "대시보드", "alt": "매치 기록이 표시된 메인 대시보드" },
-      "analysis": { "caption": "분석 지표", "alt": "분석 결과 및 지표 화면" },
-      "comparison": { "caption": "플레이어 비교", "alt": "플레이어를 나란히 비교하는 화면" }
+      "homepage": { "caption": "홈", "alt": "스캔 시작 버튼이 있는 애플리케이션 홈 화면" },
+      "scan": { "caption": "새 스캔", "alt": "스트리머의 PUBG 이름을 입력받는 스캔 화면" },
+      "results": { "caption": "결과", "alt": "스트리머와 스나이핑 의심 플레이어가 함께한 매치를 나열한 결과 표" },
+      "comparison": { "caption": "매치 비교", "alt": "스트리머와 용의자의 매치 리플레이를 나란히 비교하는 화면" },
+      "support": { "caption": "후원", "alt": "후원, 별표, 버그 신고 옵션이 있는 지원 페이지" }
     }
   },
   "contact": {

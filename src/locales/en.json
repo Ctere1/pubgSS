@@ -61,10 +61,11 @@
     "title": "A look at the interface",
     "lead": "Click any screenshot to view it full size.",
     "shots": {
-      "login": { "caption": "Login", "alt": "Login screen of the application" },
-      "dashboard": { "caption": "Dashboard", "alt": "Main dashboard with match history" },
-      "analysis": { "caption": "Analysis metrics", "alt": "Analysis results and metrics view" },
-      "comparison": { "caption": "Player comparison", "alt": "Side-by-side player comparison view" }
+      "homepage": { "caption": "Home", "alt": "Application home screen with a start-a-scan button" },
+      "scan": { "caption": "New scan", "alt": "Scan screen prompting for a streamer's PUBG username" },
+      "results": { "caption": "Results", "alt": "Results table listing matches shared between the streamer and suspected snipers" },
+      "comparison": { "caption": "Match comparison", "alt": "Side-by-side comparison of the streamer's and suspect's match replays" },
+      "support": { "caption": "Support", "alt": "Support page with sponsor, star and bug-report options" }
     }
   },
   "contact": {

@@ -61,10 +61,11 @@
     "title": "Arayüze bir bakış",
     "lead": "Büyütmek için herhangi bir ekran görüntüsüne tıklayın.",
     "shots": {
-      "login": { "caption": "Giriş", "alt": "Uygulamanın giriş ekranı" },
-      "dashboard": { "caption": "Panel", "alt": "Maç geçmişini gösteren ana panel" },
-      "analysis": { "caption": "Analiz metrikleri", "alt": "Analiz sonuçları ve metrikler görünümü" },
-      "comparison": { "caption": "Oyuncu karşılaştırması", "alt": "Yan yana oyuncu karşılaştırma görünümü" }
+      "homepage": { "caption": "Ana sayfa", "alt": "Tarama başlatma düğmesi bulunan uygulama ana ekranı" },
+      "scan": { "caption": "Yeni tarama", "alt": "Bir yayıncının PUBG kullanıcı adını isteyen tarama ekranı" },
+      "results": { "caption": "Sonuçlar", "alt": "Yayıncı ile şüpheli snipe'çılar arasında ortak olan maçları listeleyen sonuç tablosu" },
+      "comparison": { "caption": "Maç karşılaştırması", "alt": "Yayıncının ve şüphelinin maç tekrarlarının yan yana karşılaştırması" },
+      "support": { "caption": "Destek", "alt": "Sponsor olma, yıldız verme ve hata bildirme seçeneklerini içeren destek sayfası" }
     }
   },
   "contact": {

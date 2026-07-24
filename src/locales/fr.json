@@ -61,10 +61,11 @@
     "title": "Un aperçu de l’interface",
     "lead": "Cliquez sur une capture pour l’afficher en grand.",
     "shots": {
-      "login": { "caption": "Connexion", "alt": "Écran de connexion de l’application" },
-      "dashboard": { "caption": "Tableau de bord", "alt": "Tableau de bord principal avec l’historique des parties" },
-      "analysis": { "caption": "Métriques d’analyse", "alt": "Vue des résultats et des métriques d’analyse" },
-      "comparison": { "caption": "Comparaison de joueurs", "alt": "Vue de comparaison de joueurs côte à côte" }
+      "homepage": { "caption": "Accueil", "alt": "Écran d’accueil de l’application avec un bouton pour lancer une analyse" },
+      "scan": { "caption": "Nouvelle analyse", "alt": "Écran d’analyse demandant le nom PUBG d’un streamer" },
+      "results": { "caption": "Résultats", "alt": "Tableau des résultats listant les parties communes au streamer et aux snipers présumés" },
+      "comparison": { "caption": "Comparaison de parties", "alt": "Comparaison côte à côte des rediffusions de partie du streamer et du suspect" },
+      "support": { "caption": "Soutenir", "alt": "Page de soutien avec des options pour sponsoriser, mettre une étoile et signaler un bug" }
     }
   },
   "contact": {

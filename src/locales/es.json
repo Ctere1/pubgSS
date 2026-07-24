@@ -61,10 +61,11 @@
     "title": "Un vistazo a la interfaz",
     "lead": "Haz clic en cualquier captura para verla a tamaño completo.",
     "shots": {
-      "login": { "caption": "Inicio de sesión", "alt": "Pantalla de inicio de sesión de la aplicación" },
-      "dashboard": { "caption": "Panel", "alt": "Panel principal con el historial de partidas" },
-      "analysis": { "caption": "Métricas de análisis", "alt": "Vista de resultados y métricas del análisis" },
-      "comparison": { "caption": "Comparación de jugadores", "alt": "Vista de comparación de jugadores en paralelo" }
+      "homepage": { "caption": "Inicio", "alt": "Pantalla de inicio de la aplicación con un botón para iniciar un análisis" },
+      "scan": { "caption": "Nuevo análisis", "alt": "Pantalla de análisis que solicita el nombre de PUBG de un streamer" },
+      "results": { "caption": "Resultados", "alt": "Tabla de resultados con las partidas compartidas entre el streamer y los presuntos snipers" },
+      "comparison": { "caption": "Comparación de partidas", "alt": "Comparación en paralelo de las repeticiones de partida del streamer y del sospechoso" },
+      "support": { "caption": "Apoyar", "alt": "Página de apoyo con opciones para patrocinar, dar una estrella e informar de errores" }
     }
   },
   "contact": {

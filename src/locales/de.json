@@ -61,10 +61,11 @@
     "title": "Ein Blick auf die Oberfläche",
     "lead": "Klicke auf einen Screenshot, um ihn in voller Größe zu sehen.",
     "shots": {
-      "login": { "caption": "Anmeldung", "alt": "Anmeldebildschirm der Anwendung" },
-      "dashboard": { "caption": "Dashboard", "alt": "Haupt-Dashboard mit Matchhistorie" },
-      "analysis": { "caption": "Analysemetriken", "alt": "Ansicht der Analyseergebnisse und Metriken" },
-      "comparison": { "caption": "Spielervergleich", "alt": "Spielervergleich in der Gegenüberstellung" }
+      "homepage": { "caption": "Startseite", "alt": "Startbildschirm der Anwendung mit einer Schaltfläche zum Starten eines Scans" },
+      "scan": { "caption": "Neuer Scan", "alt": "Scan-Bildschirm, der nach dem PUBG-Namen eines Streamers fragt" },
+      "results": { "caption": "Ergebnisse", "alt": "Ergebnistabelle mit Matches, die der Streamer und mutmaßliche Stream-Sniper gemeinsam haben" },
+      "comparison": { "caption": "Match-Vergleich", "alt": "Gegenüberstellung der Match-Wiederholungen von Streamer und Verdächtigem" },
+      "support": { "caption": "Unterstützen", "alt": "Support-Seite mit Optionen zum Sponsern, Sternvergeben und Fehlermelden" }
     }
   },
   "contact": {

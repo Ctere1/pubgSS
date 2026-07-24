@@ -7,6 +7,7 @@ import ArrowLeftRight from '~icons/lucide/arrow-left-right'
 import ArrowRight from '~icons/lucide/arrow-right'
 import Braces from '~icons/lucide/braces'
 import Download from '~icons/lucide/download'
+import Expand from '~icons/lucide/maximize-2'
 import FileText from '~icons/lucide/file-text'
 import Globe from '~icons/lucide/globe'
 import Heart from '~icons/lucide/heart'
@@ -20,6 +21,7 @@ export {
   ArrowRight as ArrowIcon,
   X as CloseIcon,
   Download as DownloadIcon,
+  Expand as ExpandIcon,
   Github as GitHubIcon,
   Globe as GlobeIcon,
   Heart as HeartIcon,
