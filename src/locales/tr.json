@@ -11,6 +11,8 @@
     "lead": "PUBG maç geçmişinizi okuyup şüpheli stream sniping davranışının izlerini ortaya çıkaran bir masaüstü uygulaması — tekrar eden rakipler, maç örtüşme oranları ve yakınlık zaman çizelgeleri.",
     "download": "Windows için indir",
     "sponsor": "GitHub'da destekle",
+    "downloads_one": "{{count, number}} indirme",
+    "downloads_other": "{{count, number}} indirme",
     "meta": "Windows masaüstü uygulaması · Kurulum gerekmez"
   },
   "overview": {

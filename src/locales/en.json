@@ -11,6 +11,8 @@
     "lead": "A desktop tool that reads your PUBG match history and surfaces the patterns behind suspected stream sniping — recurring opponents, match overlap rates and proximity timelines.",
     "download": "Download for Windows",
     "sponsor": "Sponsor on GitHub",
+    "downloads_one": "{{count, number}} download",
+    "downloads_other": "{{count, number}} downloads",
     "meta": "Windows desktop app · No installation required"
   },
   "overview": {

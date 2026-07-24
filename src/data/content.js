@@ -21,6 +21,9 @@ export const links = {
   mail: 'mailto:cemiltan896@gmail.com',
 }
 
+/** Public, unauthenticated endpoint used for the download counter. */
+export const releasesApi = 'https://api.github.com/repos/Ctere1/pubgSS/releases'
+
 export const appIcon = asset('icon-64.png')
 
 export const nav = ['overview', 'installation', 'screenshots', 'contact']

@@ -11,6 +11,8 @@
     "lead": "Une application de bureau qui lit votre historique de parties PUBG et met en évidence les schémas derrière un stream sniping suspecté — adversaires récurrents, taux de parties communes et chronologies de proximité.",
     "download": "Télécharger pour Windows",
     "sponsor": "Soutenir sur GitHub",
+    "downloads_one": "{{count, number}} téléchargement",
+    "downloads_other": "{{count, number}} téléchargements",
     "meta": "Application Windows · Aucune installation requise"
   },
   "overview": {

@@ -11,6 +11,8 @@
     "lead": "Una aplicación de escritorio que lee tu historial de partidas de PUBG y revela los patrones detrás del posible stream sniping: rivales recurrentes, tasas de coincidencia en partidas y cronologías de proximidad.",
     "download": "Descargar para Windows",
     "sponsor": "Patrocinar en GitHub",
+    "downloads_one": "{{count, number}} descarga",
+    "downloads_other": "{{count, number}} descargas",
     "meta": "Aplicación de escritorio para Windows · Sin instalación"
   },
   "overview": {

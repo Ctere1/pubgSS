@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { links, previewShot } from '../data/content.js'
+import { useDownloadCount } from '../hooks/useDownloadCount.js'
 import { useShotText } from '../hooks/useShotText.js'
 import { Button } from './Button.jsx'
 import { Eyebrow } from './Eyebrow.jsx'
@@ -9,6 +10,7 @@ import { Reveal } from './Reveal.jsx'
 export function Hero() {
   const { t } = useTranslation()
   const preview = useShotText(previewShot)
+  const downloads = useDownloadCount()
 
   return (
     <section id="top" className="relative overflow-hidden border-b border-line">
@@ -60,8 +62,16 @@ export function Hero() {
           </Button>
         </Reveal>
 
+        {/* The counter is appended, not prepended, so arriving late grows the
+            line at the end instead of shifting the text already on screen. */}
         <Reveal delay={240} className="mt-6 text-xs text-ink-faint">
           {t('hero.meta')}
+          {downloads !== null && (
+            <>
+              <span aria-hidden="true"> · </span>
+              {t('hero.downloads', { count: downloads })}
+            </>
+          )}
         </Reveal>
       </div>
 

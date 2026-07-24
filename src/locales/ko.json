@@ -11,6 +11,7 @@
     "lead": "PUBG 매치 기록을 읽어 스트림 스나이핑이 의심되는 패턴을 드러내는 데스크톱 도구입니다 — 반복되는 상대, 매치 중복률, 근접 타임라인.",
     "download": "Windows용 다운로드",
     "sponsor": "GitHub에서 후원하기",
+    "downloads_other": "{{count, number}}회 다운로드",
     "meta": "Windows 데스크톱 앱 · 설치 불필요"
   },
   "overview": {
