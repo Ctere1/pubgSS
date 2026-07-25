@@ -58,8 +58,8 @@
         "body": "플레이어 이름을 입력해 최근 매치 기록을 불러오고 중복을 확인하세요."
       }
     },
-    "securityTitle": "공식 링크에서만 내려받으세요.",
-    "securityText": "모든 빌드는 위에 링크된 GitHub Releases 페이지에 게시되며, 앱에 내장된 업데이터가 설치 전에 각 업데이트를 SHA-256 체크섬으로 검증합니다. 미러 사이트, 포럼, 재업로드 사이트에서 받은 파일은 이 검증을 거치지 않으므로 신뢰해서는 안 됩니다."
+    "securityTitle": "공식 링크에서만 내려받으세요",
+    "securityText": "빌드는 GitHub Releases에 게시되며, 업데이터가 설치 전에 SHA-256 체크섬으로 각 빌드를 검증합니다. 다른 경로로 받은 파일은 이 검증을 거치지 않으니 신뢰할 수 없는 것으로 취급하세요."
   },
   "screenshots": {
     "title": "인터페이스 살펴보기",
@@ -123,6 +123,8 @@
     "themeToLight": "라이트 테마로 전환",
     "themeToDark": "다크 테마로 전환",
     "sponsor": "GitHub에서 프로젝트 후원",
+    "close": "닫기",
+    "securityInfo": "다운로드 검증 방식",
     "closeViewer": "뷰어 닫기",
     "language": "언어",
     "prevShot": "이전 스크린샷",

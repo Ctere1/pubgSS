@@ -59,8 +59,8 @@
         "body": "Gib einen Spielernamen ein, um die letzten Matches zu laden und Überlappungen zu prüfen."
       }
     },
-    "securityTitle": "Nur über die offiziellen Links herunterladen.",
-    "securityText": "Alle Builds werden auf der oben verlinkten GitHub-Releases-Seite veröffentlicht, und der Updater in der Anwendung prüft jedes Update vor der Installation gegen seine SHA-256-Prüfsumme. Kopien von Mirrors, aus Foren oder von Re-Upload-Seiten durchlaufen diese Prüfung nicht und sollten nicht als vertrauenswürdig gelten."
+    "securityTitle": "Nur über die offiziellen Links herunterladen",
+    "securityText": "Builds werden über GitHub Releases veröffentlicht, und der Updater prüft jeden vor der Installation gegen seine SHA-256-Prüfsumme. Eine Kopie von anderswo durchläuft diese Prüfung nicht und gilt als nicht vertrauenswürdig."
   },
   "screenshots": {
     "title": "Ein Blick auf die Oberfläche",
@@ -124,6 +124,8 @@
     "themeToLight": "Zum hellen Design wechseln",
     "themeToDark": "Zum dunklen Design wechseln",
     "sponsor": "Projekt auf GitHub unterstützen",
+    "close": "Schließen",
+    "securityInfo": "Wie Downloads geprüft werden",
     "closeViewer": "Ansicht schließen",
     "language": "Sprache",
     "prevShot": "Vorheriger Screenshot",

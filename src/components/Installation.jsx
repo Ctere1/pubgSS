@@ -1,12 +1,15 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { steps } from '../data/content.js'
 import { ExternalLink } from './ExternalLink.jsx'
 import { ArrowIcon, ShieldIcon } from './Icons.jsx'
+import { Modal } from './Modal.jsx'
 import { Reveal } from './Reveal.jsx'
 import { Section } from './Section.jsx'
 
 export function Installation() {
   const { t } = useTranslation()
+  const [securityOpen, setSecurityOpen] = useState(false)
 
   return (
     <Section
@@ -29,8 +32,24 @@ export function Installation() {
               </div>
 
               <div className={isLast ? 'pt-1' : 'pb-10 pt-1'}>
-                <h3 className="text-[15px] font-semibold tracking-tight">
+                <h3 className="flex items-center gap-2 text-[15px] font-semibold tracking-tight">
                   {t(`installation.steps.${step.id}.title`)}
+                  {/* Where the build comes from matters at exactly this step,
+                      and only to the people who ask: a quiet mark rather than a
+                      block of small print in the flow. */}
+                  {step.id === 'download' && (
+                    <button
+                      type="button"
+                      onClick={() => setSecurityOpen(true)}
+                      aria-label={t('a11y.securityInfo')}
+                      // Same string as the label: the native tooltip explains
+                      // the mark on hover, before anyone has to click it.
+                      title={t('a11y.securityInfo')}
+                      className="grid size-6 cursor-pointer place-items-center rounded-md text-ink-faint transition-colors hover:bg-surface hover:text-accent"
+                    >
+                      <ShieldIcon width="15" height="15" />
+                    </button>
+                  )}
                 </h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
                   {t(`installation.steps.${step.id}.body`)}
@@ -57,17 +76,15 @@ export function Installation() {
         })}
       </ol>
 
-      {/* Sits with the steps on purpose: the moment someone is about to
-          download is the moment the source matters. */}
-      <Reveal className="mt-10 max-w-2xl rounded-lg border border-line bg-surface p-5">
-        <div className="flex gap-4">
-          <ShieldIcon width="18" height="18" className="mt-0.5 shrink-0 text-accent" />
-          <p className="text-sm leading-relaxed text-ink-soft">
-            <span className="font-semibold text-ink">{t('installation.securityTitle')}</span>{' '}
-            {t('installation.securityText')}
-          </p>
-        </div>
-      </Reveal>
+      {securityOpen && (
+        <Modal
+          title={t('installation.securityTitle')}
+          icon={<ShieldIcon width="15" height="15" />}
+          onClose={() => setSecurityOpen(false)}
+        >
+          {t('installation.securityText')}
+        </Modal>
+      )}
     </Section>
   )
 }

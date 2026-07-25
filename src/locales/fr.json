@@ -59,8 +59,8 @@
         "body": "Saisissez un nom de joueur pour charger son historique récent et examiner les recoupements."
       }
     },
-    "securityTitle": "Téléchargez uniquement depuis les liens officiels.",
-    "securityText": "Toutes les versions sont publiées sur la page GitHub Releases liée ci-dessus, et le programme de mise à jour intégré vérifie chaque mise à jour avec sa somme de contrôle SHA-256 avant de l’installer. Les copies issues de miroirs, de forums ou de sites de re-upload ne passent par aucun contrôle de ce type et ne doivent pas être considérées comme fiables."
+    "securityTitle": "Téléchargez uniquement depuis les liens officiels",
+    "securityText": "Les versions sont publiées sur GitHub Releases, et le programme de mise à jour vérifie chacune avec sa somme de contrôle SHA-256 avant l’installation. Une copie venue d’ailleurs échappe à ce contrôle : considérez-la comme non fiable."
   },
   "screenshots": {
     "title": "Un aperçu de l’interface",
@@ -124,6 +124,8 @@
     "themeToLight": "Passer au thème clair",
     "themeToDark": "Passer au thème sombre",
     "sponsor": "Soutenir le projet sur GitHub",
+    "close": "Fermer",
+    "securityInfo": "Comment les téléchargements sont vérifiés",
     "closeViewer": "Fermer la visionneuse",
     "language": "Langue",
     "prevShot": "Capture précédente",

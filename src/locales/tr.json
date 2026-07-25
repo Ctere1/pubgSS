@@ -59,8 +59,8 @@
         "body": "Bir oyuncu adı girerek son maç geçmişini çekin ve örtüşmeleri inceleyin."
       }
     },
-    "securityTitle": "Yalnızca resmî bağlantılardan indirin.",
-    "securityText": "Tüm sürümler yukarıda bağlantısı verilen GitHub Releases sayfasında yayımlanır ve uygulamanın kendi güncelleyicisi her güncellemeyi kurmadan önce SHA-256 özet değeriyle doğrular. Yansı sitelerden, forumlardan veya yeniden yükleme sitelerinden alınan kopyalar bu doğrulamadan geçmez; güvenilir sayılmamalıdır."
+    "securityTitle": "Yalnızca resmî bağlantılardan indirin",
+    "securityText": "Sürümler GitHub Releases üzerinden yayımlanır ve güncelleyici her sürümü kurmadan önce SHA-256 özetiyle doğrular. Başka bir yerden alınan kopya bu doğrulamadan geçmez, güvenilmez kabul edin."
   },
   "screenshots": {
     "title": "Arayüze bir bakış",
@@ -124,6 +124,8 @@
     "themeToLight": "Açık temaya geç",
     "themeToDark": "Koyu temaya geç",
     "sponsor": "Projeyi GitHub'da destekle",
+    "close": "Kapat",
+    "securityInfo": "İndirmeler nasıl doğrulanıyor",
     "closeViewer": "Görüntüleyiciyi kapat",
     "language": "Dil",
     "prevShot": "Önceki ekran görüntüsü",

@@ -59,8 +59,8 @@
         "body": "Introduce el nombre de un jugador para cargar su historial reciente y revisar las coincidencias."
       }
     },
-    "securityTitle": "Descarga solo desde los enlaces oficiales.",
-    "securityText": "Todas las compilaciones se publican en la página de GitHub Releases enlazada arriba, y el actualizador de la aplicación verifica cada actualización con su suma SHA-256 antes de instalarla. Las copias de mirrors, foros o sitios de re-subida no pasan por esa comprobación y no deben considerarse fiables."
+    "securityTitle": "Descarga solo desde los enlaces oficiales",
+    "securityText": "Las compilaciones se publican en GitHub Releases y el actualizador verifica cada una con su suma SHA-256 antes de instalarla. Una copia de otro origen se salta esa comprobación, así que trátala como no fiable."
   },
   "screenshots": {
     "title": "Un vistazo a la interfaz",
@@ -124,6 +124,8 @@
     "themeToLight": "Cambiar al tema claro",
     "themeToDark": "Cambiar al tema oscuro",
     "sponsor": "Patrocinar el proyecto en GitHub",
+    "close": "Cerrar",
+    "securityInfo": "Cómo se verifican las descargas",
     "closeViewer": "Cerrar el visor",
     "language": "Idioma",
     "prevShot": "Captura anterior",

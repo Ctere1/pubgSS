@@ -59,8 +59,8 @@
         "body": "Enter a player name to pull their recent match history and inspect the overlaps."
       }
     },
-    "securityTitle": "Download from the official links only.",
-    "securityText": "Every build is published on the GitHub Releases page linked above, and the in-app updater verifies each update against its SHA-256 checksum before installing it. Copies from mirrors, forums or re-upload sites go through no such check and should not be trusted."
+    "securityTitle": "Download from the official links only",
+    "securityText": "Builds are published on GitHub Releases, and the updater checks each one against its SHA-256 checksum before installing. A copy from anywhere else skips that check, so treat it as untrusted."
   },
   "screenshots": {
     "title": "A look at the interface",
@@ -124,6 +124,8 @@
     "themeToLight": "Switch to light theme",
     "themeToDark": "Switch to dark theme",
     "sponsor": "Sponsor the project on GitHub",
+    "close": "Close",
+    "securityInfo": "How downloads are verified",
     "closeViewer": "Close viewer",
     "language": "Language",
     "prevShot": "Previous screenshot",

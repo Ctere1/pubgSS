@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useScrollLock } from '../hooks/useScrollLock.js'
 import { useShotText } from '../hooks/useShotText.js'
 import { CloseIcon } from './Icons.jsx'
 
@@ -13,6 +14,8 @@ export function Lightbox({ shot, onClose }) {
   const { caption, alt } = useShotText(shot)
   const closeRef = useRef(null)
 
+  useScrollLock()
+
   useEffect(() => {
     closeRef.current?.focus()
 
@@ -21,13 +24,7 @@ export function Lightbox({ shot, onClose }) {
     }
     document.addEventListener('keydown', onKeyDown)
 
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-
-    return () => {
-      document.removeEventListener('keydown', onKeyDown)
-      document.body.style.overflow = previousOverflow
-    }
+    return () => document.removeEventListener('keydown', onKeyDown)
   }, [onClose])
 
   return (
