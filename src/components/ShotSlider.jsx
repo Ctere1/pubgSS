@@ -136,6 +136,10 @@ export function ShotSlider() {
 
   return (
     <>
+      {/* The mouse handlers only pause autoplay. Keyboard users get the arrow
+          keys via onKeyDown below, plus the prev/next buttons — the rule cannot
+          see that a region with a keydown handler is already covered. */}
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
       <div
         role="region"
         aria-roledescription="carousel"

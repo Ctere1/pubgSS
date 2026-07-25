@@ -28,6 +28,10 @@ export function Lightbox({ shot, onClose }) {
   }, [onClose])
 
   return (
+    // The backdrop closes on click as a convenience; Escape is the keyboard
+    // equivalent and is bound on the document above. Making the backdrop itself
+    // focusable would put a second, meaningless stop in the tab order.
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
     <div
       role="dialog"
       aria-modal="true"

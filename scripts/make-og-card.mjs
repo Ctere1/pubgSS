@@ -9,7 +9,7 @@
  * the result is committed: rendering text depends on the fonts installed on the
  * machine, and the GitHub Actions runner does not have the same ones.
  */
-import { readFile, writeFile } from 'node:fs/promises'
+import { writeFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 

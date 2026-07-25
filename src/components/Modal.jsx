@@ -33,6 +33,9 @@ export function Modal({ title, icon, onClose, children }) {
   }, [onClose])
 
   return (
+    // Same as Lightbox: backdrop click is the convenience, Escape is the
+    // keyboard path, and it is bound on the document above.
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
     <div
       role="dialog"
       aria-modal="true"

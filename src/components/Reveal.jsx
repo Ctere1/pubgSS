@@ -6,15 +6,14 @@ import { useEffect, useRef, useState } from 'react'
  */
 export function Reveal({ as: Tag = 'div', delay = 0, className = '', children, ...rest }) {
   const ref = useRef(null)
-  const [visible, setVisible] = useState(false)
+  // Without IntersectionObserver there is nothing to wait for, so start shown
+  // rather than flipping the state from inside the effect.
+  const [visible, setVisible] = useState(() => !('IntersectionObserver' in window))
 
   useEffect(() => {
     const el = ref.current
-    if (!el) return
-    if (!('IntersectionObserver' in window)) {
-      setVisible(true)
-      return
-    }
+    if (!el || !('IntersectionObserver' in window)) return
+
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
