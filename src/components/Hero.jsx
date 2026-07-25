@@ -46,7 +46,9 @@ export function Hero() {
             href={links.sponsor}
             size="lg"
             variant="ghost"
-            className="btn-sponsor w-full sm:w-auto"
+            // Matched to the download button beside it (DownloadMenu.jsx) —
+            // keep the two in step.
+            className="btn-sponsor w-full sm:w-auto sm:min-w-[17rem]"
           >
             <HeartIcon width="18" height="18" className="icon-heart" />
             {t('hero.sponsor')}

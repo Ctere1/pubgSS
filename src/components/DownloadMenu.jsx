@@ -4,15 +4,19 @@ import { downloads } from '../data/content.js'
 import { useRelease } from '../hooks/useRelease.js'
 import { Button } from './Button.jsx'
 import { ExternalLink } from './ExternalLink.jsx'
-import { ChevronDownIcon, DownloadIcon } from './Icons.jsx'
+import { DownloadIcon } from './Icons.jsx'
 
 /**
- * A single download button that opens a small menu to pick between the Windows
- * builds (installer / portable). Closes on outside click, on Escape and after
- * a choice is made.
+ * A single download button that opens a small menu to pick a build: Windows
+ * installer, Windows portable, or the macOS universal app. Closes on outside
+ * click, on Escape and after a choice is made.
  *
- * sameTab on each item: the .exe is served as an attachment, so a new tab would
- * open empty and stay there.
+ * No caret or split-button divider: the button reads as one control. It still
+ * announces itself as a menu trigger through aria-haspopup/aria-expanded, so
+ * the affordance is only missing visually.
+ *
+ * sameTab on each item: the assets are served as attachments, so a new tab
+ * would open empty and stay there.
  */
 export function DownloadMenu({ size = 'lg', className = '' }) {
   const { t } = useTranslation()
@@ -43,7 +47,15 @@ export function DownloadMenu({ size = 'lg', className = '' }) {
     <div ref={wrapRef} className={`relative ${className}`}>
       <Button
         size={size}
-        className="btn-download w-full sm:w-auto"
+        // A minimum width rather than more padding: the menu below is
+        // `inset-x-0`, so it inherits the button's width, and the build labels
+        // now carry a platform prefix ("Windows · Installer") with a file size
+        // on the right. At the button's content width that pair was cramped.
+        // Matched to the sponsor button beside it in Hero.jsx — keep the two in
+        // step. The minimum also gives the menu room: it is `inset-x-0`, so it
+        // inherits this width, and the build labels now carry a platform prefix
+        // ("Windows · Installer") with a file size on the right.
+        className="btn-download w-full sm:w-auto sm:min-w-[17rem]"
         aria-haspopup="menu"
         aria-expanded={open}
         aria-controls={open ? menuId : undefined}
@@ -51,13 +63,6 @@ export function DownloadMenu({ size = 'lg', className = '' }) {
       >
         <DownloadIcon width="18" height="18" className="icon-download" />
         {t('hero.download')}
-        {/* Split-button separator between the label and the dropdown caret. */}
-        <span aria-hidden="true" className="mx-1 h-5 w-px shrink-0 self-center bg-current/25" />
-        <ChevronDownIcon
-          width="16"
-          height="16"
-          className={`mt-0.5 shrink-0 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
-        />
       </Button>
 
       {open && (
