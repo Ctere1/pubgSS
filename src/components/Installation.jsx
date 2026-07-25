@@ -55,8 +55,6 @@ export function Installation() {
                   {t(`installation.steps.${step.id}.body`)}
                 </p>
 
-                {step.code && <code className="mt-3 inline-block">{step.code}</code>}
-
                 {step.action && (
                   <ExternalLink
                     href={step.action}

@@ -22,7 +22,7 @@ export function Features() {
               key={id}
               as="article"
               delay={i * 80}
-              className="rounded-lg border border-line bg-surface-raised p-6"
+              className="rounded-lg border border-line bg-surface-raised p-6 transition-colors hover:border-line-strong"
             >
               <span className="grid size-9 place-items-center rounded-md border border-line text-accent">
                 <Icon width="18" height="18" />

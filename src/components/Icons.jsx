@@ -15,6 +15,7 @@ import Expand from '~icons/lucide/maximize-2'
 import FileText from '~icons/lucide/file-text'
 import Globe from '~icons/lucide/globe'
 import Heart from '~icons/lucide/heart'
+import Link from '~icons/lucide/link'
 import Mail from '~icons/lucide/mail'
 import Moon from '~icons/lucide/moon'
 import ShieldCheck from '~icons/lucide/shield-check'
@@ -34,6 +35,7 @@ export {
   Github as GitHubIcon,
   Globe as GlobeIcon,
   Heart as HeartIcon,
+  Link as LinkIcon,
   Mail as MailIcon,
   Moon as MoonIcon,
   ShieldCheck as ShieldIcon,

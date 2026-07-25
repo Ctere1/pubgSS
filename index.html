@@ -38,9 +38,8 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <!-- Inter is bundled, not fetched: see the @fontsource-variable import in
+         src/main.jsx. Nothing here should reach out to a font CDN. -->
 
     <script>
         // Apply the stored theme before first paint to avoid a flash of the wrong theme.
@@ -65,7 +64,7 @@
       "operatingSystem": ["Windows", "macOS"],
       "applicationCategory": "Utility",
       "description": "Analysis tool to investigate potential stream sniping patterns in PUBG using match history.",
-      "softwareVersion": "3.3.0",
+      "downloadUrl": "https://github.com/Ctere1/pubgSS/releases",
       "author": { "@type": "Person", "name": "Ctere1" },
       "publisher": { "@type": "Organization", "name": "Ctere1" },
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }

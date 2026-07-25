@@ -4,7 +4,7 @@ import { useRelease } from '../hooks/useRelease.js'
 import { Button } from './Button.jsx'
 import { DownloadMenu } from './DownloadMenu.jsx'
 import { Eyebrow } from './Eyebrow.jsx'
-import { HeartIcon } from './Icons.jsx'
+import { DownloadIcon, HeartIcon } from './Icons.jsx'
 import { Reveal } from './Reveal.jsx'
 import { ShotSlider } from './ShotSlider.jsx'
 
@@ -47,23 +47,34 @@ export function Hero() {
             variant="ghost"
             // Matched to the download button beside it (DownloadMenu.jsx) —
             // keep the two in step.
-            className="btn-sponsor w-full sm:w-auto sm:min-w-[17rem]"
+            className="btn-sponsor w-full sm:w-auto sm:min-w-68"
           >
             <HeartIcon width="18" height="18" className="icon-heart" />
             {t('hero.sponsor')}
           </Button>
         </Reveal>
 
-        {/* The counter is appended, not prepended, so arriving late grows the
-            line at the end instead of shifting the text already on screen. */}
-        <Reveal delay={240} className="mt-6 text-xs text-ink-faint">
-          {t('hero.meta')}
+        {/* The strongest reason to trust the download is how many people
+            already took it, so it gets a chip of its own rather than a clause
+            at the end of the fine print.
+
+            The row keeps its height whether or not the count is in yet: the
+            number comes from the API well after first paint, and reserving the
+            space means it lands without moving anything. */}
+        <div className="mt-6 flex h-7 items-center justify-center">
           {downloads !== null && (
-            <>
-              <span aria-hidden="true"> · </span>
+            <Reveal
+              as="span"
+              className="inline-flex items-center gap-2 rounded-full border border-line bg-surface-raised px-3 py-1 text-xs font-medium tabular-nums text-ink-soft"
+            >
+              <DownloadIcon width="13" height="13" className="text-accent" />
               {t('hero.downloads', { count: downloads })}
-            </>
+            </Reveal>
           )}
+        </div>
+
+        <Reveal delay={240} className="mt-3 text-xs text-ink-faint">
+          {t('hero.meta')}
         </Reveal>
       </div>
 
