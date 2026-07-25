@@ -2,7 +2,7 @@
   "nav": {
     "overview": "Resumen",
     "installation": "Instalación",
-    "screenshots": "Capturas",
+    "faq": "FAQ",
     "contact": "Contacto"
   },
   "hero": {
@@ -58,18 +58,50 @@
         "title": "Empieza a analizar",
         "body": "Introduce el nombre de un jugador para cargar su historial reciente y revisar las coincidencias."
       }
-    }
+    },
+    "securityTitle": "Descarga solo desde los enlaces oficiales.",
+    "securityText": "Todas las compilaciones se publican en la página de GitHub Releases enlazada arriba, y el actualizador de la aplicación verifica cada actualización con su suma SHA-256 antes de instalarla. Las copias de mirrors, foros o sitios de re-subida no pasan por esa comprobación y no deben considerarse fiables."
   },
   "screenshots": {
-    "eyebrow": "Capturas",
     "title": "Un vistazo a la interfaz",
-    "lead": "Haz clic en cualquier captura para verla a tamaño completo.",
     "shots": {
       "homepage": { "caption": "Inicio", "alt": "Pantalla de inicio de la aplicación con un botón para iniciar un análisis" },
       "scan": { "caption": "Nuevo análisis", "alt": "Pantalla de análisis que solicita el nombre de PUBG de un streamer" },
       "results": { "caption": "Resultados", "alt": "Tabla de resultados con las partidas compartidas entre el streamer y los presuntos snipers" },
-      "comparison": { "caption": "Comparación de partidas", "alt": "Comparación en paralelo de las repeticiones de partida del streamer y del sospechoso" },
+      "comparison": { "caption": "Comparación de posiciones", "alt": "Mapas en paralelo que muestran dónde estaban el streamer y el sospechoso en la misma partida" },
+      "replay": { "caption": "Comparación de repeticiones", "alt": "Reproductores de repetición en paralelo de la partida del streamer y la del sospechoso" },
       "support": { "caption": "Apoyar", "alt": "Página de apoyo con opciones para patrocinar, dar una estrella e informar de errores" }
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Preguntas frecuentes",
+    "lead": "Qué es esta herramienta, qué no es y de dónde salen sus datos.",
+    "items": {
+      "cheat": {
+        "q": "¿Es un cheat o un hack?",
+        "a": "No. No es un cheat, ni un hack, ni ninguna modificación del juego. Nunca toca el juego: ni sus archivos, ni su memoria, sin inyecciones ni overlays. Es una aplicación de escritorio independiente que lee registros de partidas públicos una vez terminadas, igual que una web de estadísticas."
+      },
+      "background": {
+        "q": "¿Se ejecuta en segundo plano mientras juego?",
+        "a": "No. Solo funciona mientras la tienes abierta y nunca sigue una partida en curso. No hay servicio en segundo plano, ni un proceso vigilando el juego, ni nada en tiempo real: lee el historial de partidas ya finalizadas."
+      },
+      "data": {
+        "q": "¿De dónde vienen los datos?",
+        "a": "Íntegramente de la API oficial de PUBG. Cada cifra que ves (partidas compartidas, tasas de coincidencia, líneas de tiempo de proximidad) se calcula con los datos que devuelve esa API. Nada se extrae del cliente del juego y nada se supone."
+      },
+      "ban": {
+        "q": "¿Usarla puede hacer que baneen mi cuenta?",
+        "a": "La aplicación no interactúa de ninguna forma con el juego ni con su cliente; solo consulta una API oficial y pública. Dicho esto, solo el operador del juego puede pronunciarse sobre las cuentas: este proyecto no está afiliado a PUBG ni a KRAFTON."
+      },
+      "verify": {
+        "q": "¿Cómo sé que la descarga es auténtica?",
+        "a": "Las compilaciones oficiales están en un solo sitio: la página de GitHub Releases enlazada desde esta web, que es adonde apunta el botón de descarga. Las actualizaciones se verifican con su suma SHA-256 publicada antes de instalarse, así que un archivo alterado por el camino no pasa la comprobación. Esa verificación solo cubre las compilaciones de los enlaces oficiales, así que trata como no fiable cualquier copia de otro origen."
+      },
+      "proof": {
+        "q": "¿Una tasa de coincidencia alta demuestra que alguien hace stream sniping?",
+        "a": "No. Es una señal, no un veredicto. Muchas partidas compartidas y encuentros cercanos hacen improbable la casualidad, pero la región, los horarios de juego y los tiempos de cola también moldean las cifras. La herramienta mide el patrón; la conclusión es tuya."
+      }
     }
   },
   "contact": {
@@ -81,7 +113,7 @@
   },
   "footer": {
     "tagline": "Análisis de partidas de PUBG",
-    "copyright": "© {{year}} Stream Sniping Detector",
+    "copyright": "© {{year}} Stream Sniping Detector",
     "github": "GitHub",
     "sponsor": "Patrocinar"
   },
@@ -93,6 +125,10 @@
     "themeToDark": "Cambiar al tema oscuro",
     "sponsor": "Patrocinar el proyecto en GitHub",
     "closeViewer": "Cerrar el visor",
-    "language": "Idioma"
+    "language": "Idioma",
+    "prevShot": "Captura anterior",
+    "nextShot": "Captura siguiente",
+    "goToShot": "Ir a la captura {{index}}",
+    "viewShot": "Ver {{caption}} a tamaño completo"
   }
 }

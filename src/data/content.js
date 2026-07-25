@@ -47,9 +47,12 @@ export const releasesApi = 'https://api.github.com/repos/Ctere1/pubgSS/releases'
 
 export const appIcon = asset('icon-64.png')
 
-export const nav = ['overview', 'installation', 'screenshots', 'contact']
+export const nav = ['overview', 'installation', 'faq', 'contact']
 
 export const features = ['json', 'pdf', 'compare']
+
+/** Order is the answer order on the page; the first one is open by default. */
+export const faqs = ['cheat', 'background', 'data', 'ban', 'verify', 'proof']
 
 export const steps = [
   { id: 'download', action: links.releases },
@@ -70,17 +73,14 @@ const SHOT_IDS = {
   ss2: 'scan',
   ss3: 'results',
   ss4: 'comparison',
-  ss5: 'comparison',
+  ss5: 'replay',
   ss6: 'support',
 }
 
+/** Order matters: the first one is the hero slider's opening slide. */
 export const screenshots = shotManifest.map((shot) => ({
   id: SHOT_IDS[shot.name] ?? shot.name,
   src: asset(shot.file),
   width: shot.width,
   height: shot.height,
 }))
-
-/** The dashboard shot doubles as the hero preview — picked by id, not index. */
-export const previewShot =
-  screenshots.find((shot) => shot.id === 'dashboard') ?? screenshots[0]

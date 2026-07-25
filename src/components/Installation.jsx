@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { steps } from '../data/content.js'
 import { ExternalLink } from './ExternalLink.jsx'
-import { ArrowIcon } from './Icons.jsx'
+import { ArrowIcon, ShieldIcon } from './Icons.jsx'
 import { Reveal } from './Reveal.jsx'
 import { Section } from './Section.jsx'
 
@@ -56,6 +56,18 @@ export function Installation() {
           )
         })}
       </ol>
+
+      {/* Sits with the steps on purpose: the moment someone is about to
+          download is the moment the source matters. */}
+      <Reveal className="mt-10 max-w-2xl rounded-lg border border-line bg-surface p-5">
+        <div className="flex gap-4">
+          <ShieldIcon width="18" height="18" className="mt-0.5 shrink-0 text-accent" />
+          <p className="text-sm leading-relaxed text-ink-soft">
+            <span className="font-semibold text-ink">{t('installation.securityTitle')}</span>{' '}
+            {t('installation.securityText')}
+          </p>
+        </div>
+      </Reveal>
     </Section>
   )
 }

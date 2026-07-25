@@ -1,7 +1,9 @@
 import { ExternalLink } from './ExternalLink.jsx'
 
+// `cursor-pointer` is explicit: Tailwind's reset leaves buttons on the UA
+// default (an arrow), which read as disabled next to the links beside them.
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-lg font-medium ' +
+  'inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg font-medium ' +
   'transition-colors duration-150 whitespace-nowrap'
 
 const variants = {

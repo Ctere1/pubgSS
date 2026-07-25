@@ -1,16 +1,15 @@
 import { useTranslation } from 'react-i18next'
-import { links, previewShot } from '../data/content.js'
+import { links } from '../data/content.js'
 import { useRelease } from '../hooks/useRelease.js'
-import { useShotText } from '../hooks/useShotText.js'
 import { Button } from './Button.jsx'
 import { DownloadMenu } from './DownloadMenu.jsx'
 import { Eyebrow } from './Eyebrow.jsx'
 import { HeartIcon } from './Icons.jsx'
 import { Reveal } from './Reveal.jsx'
+import { ShotSlider } from './ShotSlider.jsx'
 
 export function Hero() {
   const { t } = useTranslation()
-  const preview = useShotText(previewShot)
   const { downloads } = useRelease()
 
   return (
@@ -69,16 +68,7 @@ export function Hero() {
       </div>
 
       <Reveal delay={120} className="relative mx-auto max-w-5xl px-6 pb-20">
-        <div className="overflow-hidden rounded-xl border border-line bg-surface-raised">
-          <img
-            src={previewShot.src}
-            alt={preview.alt}
-            width={previewShot.width}
-            height={previewShot.height}
-            fetchPriority="high"
-            className="w-full"
-          />
-        </div>
+        <ShotSlider />
       </Reveal>
     </section>
   )

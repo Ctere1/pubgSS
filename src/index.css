@@ -151,6 +151,15 @@
 }
 
 /* ---------------------------------------------------------------
+   Hero screenshot slider: the track slides between slides. The
+   component switches this off inline while a finger is dragging so
+   the track follows the pointer one-to-one.
+   --------------------------------------------------------------- */
+.shot-track {
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------------------------------------------------------------
    Icon behaviour tied to a hovered control. Both idioms live here
    because they reach inside the lucide markup, which carries
    fill="none" on the path itself.
@@ -254,6 +263,12 @@
   .reveal[data-visible="true"] {
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+
+  /* Slides still change — they just cut instead of gliding. The slider
+     also stops advancing on its own (see useSlider). */
+  .shot-track {
     transition: none;
   }
 }

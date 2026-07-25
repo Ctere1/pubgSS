@@ -2,7 +2,7 @@
   "nav": {
     "overview": "Genel Bakış",
     "installation": "Kurulum",
-    "screenshots": "Ekran Görüntüleri",
+    "faq": "SSS",
     "contact": "İletişim"
   },
   "hero": {
@@ -58,18 +58,50 @@
         "title": "Analize başlayın",
         "body": "Bir oyuncu adı girerek son maç geçmişini çekin ve örtüşmeleri inceleyin."
       }
-    }
+    },
+    "securityTitle": "Yalnızca resmî bağlantılardan indirin.",
+    "securityText": "Tüm sürümler yukarıda bağlantısı verilen GitHub Releases sayfasında yayımlanır ve uygulamanın kendi güncelleyicisi her güncellemeyi kurmadan önce SHA-256 özet değeriyle doğrular. Yansı sitelerden, forumlardan veya yeniden yükleme sitelerinden alınan kopyalar bu doğrulamadan geçmez; güvenilir sayılmamalıdır."
   },
   "screenshots": {
-    "eyebrow": "Ekran Görüntüleri",
     "title": "Arayüze bir bakış",
-    "lead": "Büyütmek için herhangi bir ekran görüntüsüne tıklayın.",
     "shots": {
       "homepage": { "caption": "Ana sayfa", "alt": "Tarama başlatma düğmesi bulunan uygulama ana ekranı" },
       "scan": { "caption": "Yeni tarama", "alt": "Bir yayıncının PUBG kullanıcı adını isteyen tarama ekranı" },
       "results": { "caption": "Sonuçlar", "alt": "Yayıncı ile şüpheli snipe'çılar arasında ortak olan maçları listeleyen sonuç tablosu" },
-      "comparison": { "caption": "Maç karşılaştırması", "alt": "Yayıncının ve şüphelinin maç tekrarlarının yan yana karşılaştırması" },
+      "comparison": { "caption": "Konum karşılaştırması", "alt": "Yayıncı ile şüphelinin aynı maçtaki konumlarını yan yana gösteren haritalar" },
+      "replay": { "caption": "Tekrar karşılaştırması", "alt": "Yayıncının ve şüphelinin maç tekrarlarının yan yana oynatıcıları" },
       "support": { "caption": "Destek", "alt": "Sponsor olma, yıldız verme ve hata bildirme seçeneklerini içeren destek sayfası" }
+    }
+  },
+  "faq": {
+    "eyebrow": "SSS",
+    "title": "Sıkça sorulan sorular",
+    "lead": "Bu araç nedir, ne değildir ve verisini nereden alır.",
+    "items": {
+      "cheat": {
+        "q": "Bu bir hile ya da hack mi?",
+        "a": "Hayır. Bu bir hile, hack veya herhangi bir oyun müdahalesi değildir. Oyuna hiçbir şekilde dokunmaz: dosyalarına ve belleğine erişmez, enjeksiyon yapmaz, overlay açmaz. Herhangi bir istatistik sitesi gibi, oyun bittikten sonra herkese açık maç kayıtlarını okuyan ayrı bir masaüstü uygulamasıdır."
+      },
+      "background": {
+        "q": "Ben oynarken arka planda çalışır mı?",
+        "a": "Hayır. Yalnızca siz açtığınızda çalışır ve devam eden bir maçı asla takip etmez. Arka planda çalışan bir servis, oyunu izleyen bir süreç veya gerçek zamanlı hiçbir şey yoktur. Sadece çoktan bitmiş maçların geçmişini okur."
+      },
+      "data": {
+        "q": "Veriler nereden geliyor?",
+        "a": "Tamamen resmî PUBG API'sinden. Gördüğünüz her değer (ortak maçlar, çakışma oranları, yakınlık zaman çizelgeleri) bu API'nin döndürdüğü maç verisinden hesaplanır. Oyun istemcisinden hiçbir veri çekilmez, hiçbir şey tahmin edilmez."
+      },
+      "ban": {
+        "q": "Kullanmak hesabımın yasaklanmasına yol açar mı?",
+        "a": "Uygulama oyunla veya oyun istemcisiyle hiçbir şekilde etkileşime girmez; yalnızca resmî ve herkese açık bir API'ye sorgu gönderir. Yine de hesaplar hakkında yalnızca oyunun sahibi konuşabilir. Bu proje PUBG veya KRAFTON ile bağlantılı değildir."
+      },
+      "verify": {
+        "q": "İndirdiğim dosyanın orijinal olduğunu nasıl anlarım?",
+        "a": "Resmî sürümler tek bir yerde bulunur: bu sitedeki indirme düğmesinin de işaret ettiği GitHub Releases sayfası. Güncellemeler kurulmadan önce yayımlanmış SHA-256 özet değeriyle doğrulanır; yolda değiştirilmiş bir dosya bu kontrolü geçemez. Bu doğrulama yalnızca resmî bağlantılardan gelen sürümleri kapsar, dolayısıyla başka bir yerden edinilen kopyayı güvenilmez kabul edin."
+      },
+      "proof": {
+        "q": "Yüksek çakışma oranı birinin stream snipe yaptığını kanıtlar mı?",
+        "a": "Hayır. Bu bir işarettir, bir hüküm değil. Yüksek ortak maç ve yakın karşılaşma oranı, örüntünün tesadüf olma ihtimalini düşürür; ancak bölge, oynama saatleri ve eşleşme süreleri de sonuçları etkiler. Araç örüntüyü ölçer, sonucu siz verirsiniz."
+      }
     }
   },
   "contact": {
@@ -81,7 +113,7 @@
   },
   "footer": {
     "tagline": "PUBG maç analizi",
-    "copyright": "© {{year}} Stream Sniping Detector",
+    "copyright": "© {{year}} Stream Sniping Detector",
     "github": "GitHub",
     "sponsor": "Destekle"
   },
@@ -93,6 +125,10 @@
     "themeToDark": "Koyu temaya geç",
     "sponsor": "Projeyi GitHub'da destekle",
     "closeViewer": "Görüntüleyiciyi kapat",
-    "language": "Dil"
+    "language": "Dil",
+    "prevShot": "Önceki ekran görüntüsü",
+    "nextShot": "Sonraki ekran görüntüsü",
+    "goToShot": "{{index}}. ekran görüntüsüne git",
+    "viewShot": "{{caption}} görüntüsünü tam boyutta aç"
   }
 }

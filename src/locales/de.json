@@ -2,7 +2,7 @@
   "nav": {
     "overview": "Überblick",
     "installation": "Installation",
-    "screenshots": "Screenshots",
+    "faq": "FAQ",
     "contact": "Kontakt"
   },
   "hero": {
@@ -58,18 +58,50 @@
         "title": "Analyse starten",
         "body": "Gib einen Spielernamen ein, um die letzten Matches zu laden und Überlappungen zu prüfen."
       }
-    }
+    },
+    "securityTitle": "Nur über die offiziellen Links herunterladen.",
+    "securityText": "Alle Builds werden auf der oben verlinkten GitHub-Releases-Seite veröffentlicht, und der Updater in der Anwendung prüft jedes Update vor der Installation gegen seine SHA-256-Prüfsumme. Kopien von Mirrors, aus Foren oder von Re-Upload-Seiten durchlaufen diese Prüfung nicht und sollten nicht als vertrauenswürdig gelten."
   },
   "screenshots": {
-    "eyebrow": "Screenshots",
     "title": "Ein Blick auf die Oberfläche",
-    "lead": "Klicke auf einen Screenshot, um ihn in voller Größe zu sehen.",
     "shots": {
       "homepage": { "caption": "Startseite", "alt": "Startbildschirm der Anwendung mit einer Schaltfläche zum Starten eines Scans" },
       "scan": { "caption": "Neuer Scan", "alt": "Scan-Bildschirm, der nach dem PUBG-Namen eines Streamers fragt" },
       "results": { "caption": "Ergebnisse", "alt": "Ergebnistabelle mit Matches, die der Streamer und mutmaßliche Stream-Sniper gemeinsam haben" },
-      "comparison": { "caption": "Match-Vergleich", "alt": "Gegenüberstellung der Match-Wiederholungen von Streamer und Verdächtigem" },
+      "comparison": { "caption": "Positionsvergleich", "alt": "Karten nebeneinander, die zeigen, wo Streamer und Verdächtiger im selben Match waren" },
+      "replay": { "caption": "Wiederholungsvergleich", "alt": "Gegenüberstellung der Match-Wiederholungen von Streamer und Verdächtigem" },
       "support": { "caption": "Unterstützen", "alt": "Support-Seite mit Optionen zum Sponsern, Sternvergeben und Fehlermelden" }
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Häufig gestellte Fragen",
+    "lead": "Was das Tool ist, was es nicht ist und woher seine Daten stammen.",
+    "items": {
+      "cheat": {
+        "q": "Ist das ein Cheat oder Hack?",
+        "a": "Nein. Es ist weder ein Cheat noch ein Hack noch eine Veränderung des Spiels. Es fasst das Spiel nie an: keine Dateien, kein Arbeitsspeicher, keine Injection, kein Overlay. Es ist eine eigenständige Desktop-Anwendung, die im Nachhinein öffentlich verfügbare Match-Daten liest, genau wie eine Statistik-Website."
+      },
+      "background": {
+        "q": "Läuft es im Hintergrund, während ich spiele?",
+        "a": "Nein. Es läuft nur, solange du es geöffnet hast, und verfolgt niemals ein laufendes Match. Es gibt keinen Hintergrunddienst, keinen Prozess, der das Spiel beobachtet, und nichts Echtzeitfähiges. Gelesen wird die Historie bereits beendeter Matches."
+      },
+      "data": {
+        "q": "Woher kommen die Daten?",
+        "a": "Ausschließlich aus der offiziellen PUBG-API. Jede Zahl (gemeinsame Matches, Überschneidungsraten, Näherungsverläufe) wird aus den Match-Daten dieser API berechnet. Nichts wird aus dem Spiel-Client ausgelesen und nichts geschätzt."
+      },
+      "ban": {
+        "q": "Kann mein Account dadurch gesperrt werden?",
+        "a": "Die Anwendung interagiert in keiner Weise mit dem Spiel oder seinem Client; sie fragt nur eine offizielle, öffentliche API ab. Aussagen über Accounts kann allerdings nur der Betreiber des Spiels treffen. Dieses Projekt steht in keiner Verbindung zu PUBG oder KRAFTON."
+      },
+      "verify": {
+        "q": "Woher weiß ich, dass der Download echt ist?",
+        "a": "Offizielle Builds gibt es nur an einer Stelle: auf der von dieser Seite verlinkten GitHub-Releases-Seite, auf die auch der Download-Button zeigt. Updates werden vor der Installation gegen ihre veröffentlichte SHA-256-Prüfsumme geprüft, eine unterwegs veränderte Datei besteht diese Prüfung also nicht. Sie gilt nur für Builds aus den offiziellen Links; eine Kopie von anderswo solltest du als nicht vertrauenswürdig behandeln."
+      },
+      "proof": {
+        "q": "Beweist eine hohe Überschneidungsrate Stream Sniping?",
+        "a": "Nein. Sie ist ein Hinweis, kein Urteil. Viele gemeinsame Matches und nahe Begegnungen machen Zufall unwahrscheinlich, aber Region, Spielzeiten und Wartezeiten prägen die Zahlen mit. Das Tool misst das Muster; die Schlussfolgerung ziehst du."
+      }
     }
   },
   "contact": {
@@ -81,7 +113,7 @@
   },
   "footer": {
     "tagline": "PUBG-Match-Analyse",
-    "copyright": "© {{year}} Stream Sniping Detector",
+    "copyright": "© {{year}} Stream Sniping Detector",
     "github": "GitHub",
     "sponsor": "Unterstützen"
   },
@@ -93,6 +125,10 @@
     "themeToDark": "Zum dunklen Design wechseln",
     "sponsor": "Projekt auf GitHub unterstützen",
     "closeViewer": "Ansicht schließen",
-    "language": "Sprache"
+    "language": "Sprache",
+    "prevShot": "Vorheriger Screenshot",
+    "nextShot": "Nächster Screenshot",
+    "goToShot": "Zu Screenshot {{index}} springen",
+    "viewShot": "{{caption}} in voller Größe ansehen"
   }
 }

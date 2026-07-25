@@ -45,7 +45,7 @@ export function Lightbox({ shot, onClose }) {
         type="button"
         onClick={onClose}
         aria-label={t('a11y.closeViewer')}
-        className="absolute right-4 top-4 grid size-10 place-items-center rounded-lg text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+        className="absolute right-4 top-4 grid size-10 cursor-pointer place-items-center rounded-lg text-white/70 transition-colors hover:bg-white/10 hover:text-white"
       >
         <CloseIcon width="20" height="20" />
       </button>

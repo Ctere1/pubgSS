@@ -2,7 +2,7 @@
   "nav": {
     "overview": "Aperçu",
     "installation": "Installation",
-    "screenshots": "Captures",
+    "faq": "FAQ",
     "contact": "Contact"
   },
   "hero": {
@@ -58,18 +58,50 @@
         "title": "Commencez l’analyse",
         "body": "Saisissez un nom de joueur pour charger son historique récent et examiner les recoupements."
       }
-    }
+    },
+    "securityTitle": "Téléchargez uniquement depuis les liens officiels.",
+    "securityText": "Toutes les versions sont publiées sur la page GitHub Releases liée ci-dessus, et le programme de mise à jour intégré vérifie chaque mise à jour avec sa somme de contrôle SHA-256 avant de l’installer. Les copies issues de miroirs, de forums ou de sites de re-upload ne passent par aucun contrôle de ce type et ne doivent pas être considérées comme fiables."
   },
   "screenshots": {
-    "eyebrow": "Captures d’écran",
     "title": "Un aperçu de l’interface",
-    "lead": "Cliquez sur une capture pour l’afficher en grand.",
     "shots": {
       "homepage": { "caption": "Accueil", "alt": "Écran d’accueil de l’application avec un bouton pour lancer une analyse" },
       "scan": { "caption": "Nouvelle analyse", "alt": "Écran d’analyse demandant le nom PUBG d’un streamer" },
       "results": { "caption": "Résultats", "alt": "Tableau des résultats listant les parties communes au streamer et aux snipers présumés" },
-      "comparison": { "caption": "Comparaison de parties", "alt": "Comparaison côte à côte des rediffusions de partie du streamer et du suspect" },
+      "comparison": { "caption": "Comparaison des positions", "alt": "Cartes côte à côte montrant où se trouvaient le streamer et le suspect dans la même partie" },
+      "replay": { "caption": "Comparaison des rediffusions", "alt": "Lecteurs de rediffusion côte à côte pour la partie du streamer et celle du suspect" },
       "support": { "caption": "Soutenir", "alt": "Page de soutien avec des options pour sponsoriser, mettre une étoile et signaler un bug" }
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions fréquentes",
+    "lead": "Ce qu’est cet outil, ce qu’il n’est pas, et d’où viennent ses données.",
+    "items": {
+      "cheat": {
+        "q": "Est-ce une triche ou un hack ?",
+        "a": "Non. Ce n’est ni une triche, ni un hack, ni une quelconque modification du jeu. L’outil ne touche jamais au jeu : aucun fichier, aucune mémoire, aucune injection, aucun overlay. C’est une application de bureau séparée qui lit après coup des données de parties publiques, comme le ferait un site de statistiques."
+      },
+      "background": {
+        "q": "Tourne-t-il en arrière-plan pendant que je joue ?",
+        "a": "Non. Il ne fonctionne que lorsque vous l’ouvrez et ne suit jamais une partie en cours. Aucun service en arrière-plan, aucun processus qui surveille le jeu, rien de temps réel : il lit l’historique de parties déjà terminées."
+      },
+      "data": {
+        "q": "D’où viennent les données ?",
+        "a": "Entièrement de l’API officielle de PUBG. Chaque chiffre affiché (parties communes, taux de recoupement, chronologies de proximité) est calculé à partir des données que renvoie cette API. Rien n’est extrait du client du jeu et rien n’est deviné."
+      },
+      "ban": {
+        "q": "Son utilisation peut-elle faire bannir mon compte ?",
+        "a": "L’application n’interagit d’aucune manière avec le jeu ou son client ; elle interroge seulement une API officielle et publique. Cela dit, seul l’éditeur du jeu peut se prononcer sur les comptes. Ce projet n’est affilié ni à PUBG ni à KRAFTON."
+      },
+      "verify": {
+        "q": "Comment savoir que le téléchargement est authentique ?",
+        "a": "Les versions officielles se trouvent à un seul endroit : la page GitHub Releases liée depuis ce site, vers laquelle pointe aussi le bouton de téléchargement. Les mises à jour sont vérifiées avec leur somme de contrôle SHA-256 publiée avant d’être installées, si bien qu’un fichier modifié en route ne passe pas. Cette vérification ne couvre que les versions issues des liens officiels : considérez toute copie provenant d’ailleurs comme non fiable."
+      },
+      "proof": {
+        "q": "Un taux de recoupement élevé prouve-t-il le stream sniping ?",
+        "a": "Non. C’est un signal, pas un verdict. Beaucoup de parties communes et de rencontres rapprochées rendent le hasard peu probable, mais la région, les horaires de jeu et les temps d’attente influencent aussi les chiffres. L’outil mesure le schéma ; la conclusion vous appartient."
+      }
     }
   },
   "contact": {
@@ -81,7 +113,7 @@
   },
   "footer": {
     "tagline": "Analyse de parties PUBG",
-    "copyright": "© {{year}} Stream Sniping Detector",
+    "copyright": "© {{year}} Stream Sniping Detector",
     "github": "GitHub",
     "sponsor": "Soutenir"
   },
@@ -93,6 +125,10 @@
     "themeToDark": "Passer au thème sombre",
     "sponsor": "Soutenir le projet sur GitHub",
     "closeViewer": "Fermer la visionneuse",
-    "language": "Langue"
+    "language": "Langue",
+    "prevShot": "Capture précédente",
+    "nextShot": "Capture suivante",
+    "goToShot": "Aller à la capture {{index}}",
+    "viewShot": "Afficher {{caption}} en grand"
   }
 }

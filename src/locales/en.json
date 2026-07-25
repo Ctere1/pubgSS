@@ -2,7 +2,7 @@
   "nav": {
     "overview": "Overview",
     "installation": "Installation",
-    "screenshots": "Screenshots",
+    "faq": "FAQ",
     "contact": "Contact"
   },
   "hero": {
@@ -58,18 +58,50 @@
         "title": "Start analysing",
         "body": "Enter a player name to pull their recent match history and inspect the overlaps."
       }
-    }
+    },
+    "securityTitle": "Download from the official links only.",
+    "securityText": "Every build is published on the GitHub Releases page linked above, and the in-app updater verifies each update against its SHA-256 checksum before installing it. Copies from mirrors, forums or re-upload sites go through no such check and should not be trusted."
   },
   "screenshots": {
-    "eyebrow": "Screenshots",
     "title": "A look at the interface",
-    "lead": "Click any screenshot to view it full size.",
     "shots": {
       "homepage": { "caption": "Home", "alt": "Application home screen with a start-a-scan button" },
       "scan": { "caption": "New scan", "alt": "Scan screen prompting for a streamer's PUBG username" },
       "results": { "caption": "Results", "alt": "Results table listing matches shared between the streamer and suspected snipers" },
-      "comparison": { "caption": "Match comparison", "alt": "Side-by-side comparison of the streamer's and suspect's match replays" },
+      "comparison": { "caption": "Position comparison", "alt": "Side-by-side maps showing where the streamer and the suspect were in the same match" },
+      "replay": { "caption": "Replay comparison", "alt": "Side-by-side replay players for the streamer's and the suspect's match" },
       "support": { "caption": "Support", "alt": "Support page with sponsor, star and bug-report options" }
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "lead": "What the tool is, what it is not, and where its data comes from.",
+    "items": {
+      "cheat": {
+        "q": "Is this a cheat or a hack?",
+        "a": "No. It is not a cheat, a hack or any kind of game modification. It never touches the game: no files, no memory, no injection, no overlay. It is a separate desktop application that reads publicly available match records after the fact, the same way a stats website does."
+      },
+      "background": {
+        "q": "Does it run in the background while I play?",
+        "a": "No. It only runs while you have it open, and it never follows a match in progress. There is no background service, no process watching the game and nothing real time about it. It reads the history of matches that have already ended."
+      },
+      "data": {
+        "q": "Where does the data come from?",
+        "a": "Entirely from the official PUBG API. Every number you see (shared matches, overlap rates, proximity timelines) is derived from the match data that API returns. Nothing is scraped from the game client and nothing is guessed."
+      },
+      "ban": {
+        "q": "Can using it get my account banned?",
+        "a": "The application does not interact with the game or its client in any way; it only queries an official, public API. That said, only the game's own operator can make statements about accounts. This project is not affiliated with PUBG or KRAFTON."
+      },
+      "verify": {
+        "q": "How do I know the download is genuine?",
+        "a": "Official builds exist in one place: the GitHub Releases page linked from this site, which is where the download button points. Updates are verified against their published SHA-256 checksum before they are installed, so a file altered on the way does not pass. That check only covers builds from the official links, so treat a copy from anywhere else as untrusted."
+      },
+      "proof": {
+        "q": "Does a high overlap rate prove someone is stream sniping?",
+        "a": "No. It is a signal, not a verdict. A high rate of shared matches and close encounters means the pattern is unlikely to be chance, but region, playtime and queue times all shape the numbers. The tool measures the pattern; the conclusion is yours."
+      }
     }
   },
   "contact": {
@@ -81,7 +113,7 @@
   },
   "footer": {
     "tagline": "PUBG match analysis",
-    "copyright": "© {{year}} Stream Sniping Detector",
+    "copyright": "© {{year}} Stream Sniping Detector",
     "github": "GitHub",
     "sponsor": "Sponsor"
   },
@@ -93,6 +125,10 @@
     "themeToDark": "Switch to dark theme",
     "sponsor": "Sponsor the project on GitHub",
     "closeViewer": "Close viewer",
-    "language": "Language"
+    "language": "Language",
+    "prevShot": "Previous screenshot",
+    "nextShot": "Next screenshot",
+    "goToShot": "Go to screenshot {{index}}",
+    "viewShot": "View {{caption}} full size"
   }
 }

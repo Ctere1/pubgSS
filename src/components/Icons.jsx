@@ -8,6 +8,8 @@ import ArrowRight from '~icons/lucide/arrow-right'
 import Braces from '~icons/lucide/braces'
 import Check from '~icons/lucide/check'
 import ChevronDown from '~icons/lucide/chevron-down'
+import ChevronLeft from '~icons/lucide/chevron-left'
+import ChevronRight from '~icons/lucide/chevron-right'
 import Download from '~icons/lucide/download'
 import Expand from '~icons/lucide/maximize-2'
 import FileText from '~icons/lucide/file-text'
@@ -15,6 +17,7 @@ import Globe from '~icons/lucide/globe'
 import Heart from '~icons/lucide/heart'
 import Mail from '~icons/lucide/mail'
 import Moon from '~icons/lucide/moon'
+import ShieldCheck from '~icons/lucide/shield-check'
 import Sun from '~icons/lucide/sun'
 import X from '~icons/lucide/x'
 import Github from '~icons/simple-icons/github'
@@ -23,6 +26,8 @@ export {
   ArrowRight as ArrowIcon,
   Check as CheckIcon,
   ChevronDown as ChevronDownIcon,
+  ChevronLeft as ChevronLeftIcon,
+  ChevronRight as ChevronRightIcon,
   X as CloseIcon,
   Download as DownloadIcon,
   Expand as ExpandIcon,
@@ -31,6 +36,7 @@ export {
   Heart as HeartIcon,
   Mail as MailIcon,
   Moon as MoonIcon,
+  ShieldCheck as ShieldIcon,
   Sun as SunIcon,
 }
 

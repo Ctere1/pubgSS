@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next'
 import { Contact } from './components/Contact.jsx'
+import { Faq } from './components/Faq.jsx'
 import { Features } from './components/Features.jsx'
 import { Footer } from './components/Footer.jsx'
 import { Header } from './components/Header.jsx'
 import { Hero } from './components/Hero.jsx'
 import { Installation } from './components/Installation.jsx'
-import { Screenshots } from './components/Screenshots.jsx'
 import { useTheme } from './hooks/useTheme.js'
 
 export default function App() {
@@ -27,7 +27,7 @@ export default function App() {
         <Hero />
         <Features />
         <Installation />
-        <Screenshots />
+        <Faq />
         <Contact />
       </main>
 

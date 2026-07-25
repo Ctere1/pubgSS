@@ -82,7 +82,7 @@ export function LanguageSwitcher() {
         aria-expanded={open}
         aria-controls={open ? menuId : undefined}
         onClick={() => setOpen((v) => !v)}
-        className={`flex h-10 items-center rounded-lg text-ink-soft transition-colors hover:bg-surface-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:h-9 ${
+        className={`flex h-10 cursor-pointer items-center rounded-lg text-ink-soft transition-colors hover:bg-surface-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:h-9 ${
           open ? 'bg-surface-muted text-ink' : ''
         }`}
       >
@@ -113,7 +113,7 @@ export function LanguageSwitcher() {
                 role="menuitemradio"
                 aria-checked={isCurrent}
                 onClick={() => select(language.code)}
-                className={`flex w-full items-center justify-between gap-3 rounded-lg px-3 py-2 transition-colors hover:bg-surface-muted ${
+                className={`flex w-full cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-2 transition-colors hover:bg-surface-muted ${
                   isCurrent ? 'text-ink' : 'text-ink-soft'
                 }`}
               >

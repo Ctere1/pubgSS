@@ -38,7 +38,7 @@ export function Header({ theme, onToggleTheme }) {
             type="button"
             onClick={onToggleTheme}
             aria-label={theme === 'dark' ? t('a11y.themeToLight') : t('a11y.themeToDark')}
-            className="grid size-10 place-items-center rounded-lg text-ink-soft transition-colors hover:bg-surface-muted hover:text-ink md:size-9"
+            className="grid size-10 cursor-pointer place-items-center rounded-lg text-ink-soft transition-colors hover:bg-surface-muted hover:text-ink md:size-9"
           >
             {theme === 'dark' ? (
               <SunIcon width="18" height="18" />
