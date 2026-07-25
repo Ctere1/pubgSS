@@ -9,14 +9,15 @@
     "eyebrow": "Análisis de partidas de PUBG",
     "title": "Stream Sniping Detector",
     "lead": "Una aplicación de escritorio que lee tu historial de partidas de PUBG y revela los patrones detrás del posible stream sniping: rivales recurrentes, tasas de coincidencia en partidas y cronologías de proximidad.",
-    "download": "Descargar para Windows",
-    "installer": "Instalador",
-    "portable": "Portátil",
+    "download": "Descargar",
+    "installer": "Windows · Instalador",
+    "portable": "Windows · Portátil",
+    "macos": "macOS · Universal",
     "sponsor": "Patrocinar en GitHub",
     "latest": "Última versión",
     "downloads_one": "{{count, number}} descarga",
     "downloads_other": "{{count, number}} descargas",
-    "meta": "Aplicación de escritorio para Windows · Versión con instalador o portátil"
+    "meta": "Windows y macOS · Versión con instalador, portátil o universal"
   },
   "overview": {
     "eyebrow": "Resumen",
@@ -42,7 +43,7 @@
   "installation": {
     "eyebrow": "Instalación",
     "title": "Listo en tres pasos",
-    "lead": "Por ahora solo Windows: puede que llegue compatibilidad con macOS.",
+    "lead": "Windows y macOS. La versión para macOS no está notarizada por Apple, así que incluye un instalador que elimina la marca de cuarentena por ti.",
     "steps": {
       "download": {
         "title": "Descarga la última versión",
@@ -51,7 +52,7 @@
       },
       "run": {
         "title": "Ejecuta la aplicación",
-        "body": "Ejecuta el instalador para configurarlo o haz doble clic en la versión portátil: no requiere instalación."
+        "body": "En Windows, ejecuta el instalador o haz doble clic en la versión portátil: no requiere instalación. En macOS, descomprime la descarga y haz doble clic en Install.command (clic derecho → Abrir si macOS lo bloquea); copia la app a Aplicaciones y la abre."
       },
       "analyse": {
         "title": "Empieza a analizar",

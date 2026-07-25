@@ -9,14 +9,15 @@
     "eyebrow": "PUBG match analysis",
     "title": "Stream Sniping Detector",
     "lead": "A desktop tool that reads your PUBG match history and surfaces the patterns behind suspected stream sniping — recurring opponents, match overlap rates and proximity timelines.",
-    "download": "Download for Windows",
-    "installer": "Installer",
-    "portable": "Portable",
+    "download": "Download",
+    "installer": "Windows · Installer",
+    "portable": "Windows · Portable",
+    "macos": "macOS · Universal",
     "sponsor": "Sponsor on GitHub",
     "latest": "Latest release",
     "downloads_one": "{{count, number}} download",
     "downloads_other": "{{count, number}} downloads",
-    "meta": "Windows desktop app · Installer or portable build"
+    "meta": "Windows and macOS · Installer, portable or universal app"
   },
   "overview": {
     "eyebrow": "Overview",
@@ -42,7 +43,7 @@
   "installation": {
     "eyebrow": "Installation",
     "title": "Up and running in three steps",
-    "lead": "Windows only for now — macOS support may come later.",
+    "lead": "Windows and macOS. The macOS build is not notarised by Apple, so it ships with an installer that clears the quarantine flag for you.",
     "steps": {
       "download": {
         "title": "Download the latest release",
@@ -51,7 +52,7 @@
       },
       "run": {
         "title": "Run the application",
-        "body": "Run the installer to set it up, or double-click the portable build — no installation needed."
+        "body": "On Windows, run the installer or double-click the portable build — no installation needed. On macOS, unzip the download and double-click Install.command (right-click → Open if macOS blocks it); it copies the app to Applications and opens it."
       },
       "analyse": {
         "title": "Start analysing",

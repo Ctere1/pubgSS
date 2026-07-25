@@ -14,10 +14,10 @@ export const links = {
 }
 
 /**
- * The two Windows builds, served straight from the newest release — GitHub
- * redirects `latest/download/<asset>` to whichever tag is current, so these
- * never need bumping. They do depend on the assets keeping these exact file
- * names: rename a release asset and its link 404s.
+ * The builds, served straight from the newest release — GitHub redirects
+ * `latest/download/<asset>` to whichever tag is current, so these never need
+ * bumping. They do depend on the assets keeping these exact file names: rename
+ * a release asset and its link 404s.
  *
  * `size` is shown next to each button as a picking hint; it is approximate and
  * only needs a rough refresh when a build's weight changes noticeably.
@@ -33,6 +33,13 @@ export const downloads = [
     href: 'https://github.com/Ctere1/pubgSS/releases/latest/download/pubg-stream-sniping-detector-amd64-portable.exe',
     size: '13.4 MB',
   },
+  {
+    // Universal: one asset covers both Intel and Apple Silicon, which is also
+    // what the in-app updater expects to find.
+    id: 'macos',
+    href: 'https://github.com/Ctere1/pubgSS/releases/latest/download/pubg-stream-sniping-detector-macos-universal.zip',
+    size: '11.1 MB',
+  },
 ]
 
 /** Public, unauthenticated endpoint used for the download counter. */
@@ -46,7 +53,7 @@ export const features = ['json', 'pdf', 'compare']
 
 export const steps = [
   { id: 'download', action: links.releases },
-  { id: 'run', code: 'pubg-stream-sniping-detector-amd64-portable.exe' },
+  { id: 'run' },
   { id: 'analyse' },
 ]
 

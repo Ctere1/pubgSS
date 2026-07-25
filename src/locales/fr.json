@@ -9,14 +9,15 @@
     "eyebrow": "Analyse de parties PUBG",
     "title": "Stream Sniping Detector",
     "lead": "Une application de bureau qui lit votre historique de parties PUBG et met en évidence les schémas derrière un stream sniping suspecté — adversaires récurrents, taux de parties communes et chronologies de proximité.",
-    "download": "Télécharger pour Windows",
-    "installer": "Installateur",
-    "portable": "Portable",
+    "download": "Télécharger",
+    "installer": "Windows · Installateur",
+    "portable": "Windows · Portable",
+    "macos": "macOS · Universel",
     "sponsor": "Soutenir sur GitHub",
     "latest": "Dernière version",
     "downloads_one": "{{count, number}} téléchargement",
     "downloads_other": "{{count, number}} téléchargements",
-    "meta": "Application Windows · Version avec installateur ou portable"
+    "meta": "Windows et macOS · Version avec installateur, portable ou universelle"
   },
   "overview": {
     "eyebrow": "Aperçu",
@@ -42,7 +43,7 @@
   "installation": {
     "eyebrow": "Installation",
     "title": "Opérationnel en trois étapes",
-    "lead": "Windows uniquement pour l’instant — une prise en charge de macOS pourrait suivre.",
+    "lead": "Windows et macOS. La version macOS n’est pas notarisée par Apple : elle est donc fournie avec un installateur qui retire l’indicateur de quarantaine à votre place.",
     "steps": {
       "download": {
         "title": "Téléchargez la dernière version",
@@ -51,7 +52,7 @@
       },
       "run": {
         "title": "Lancez l’application",
-        "body": "Lancez l’installateur pour l’installer, ou double-cliquez sur la version portable — aucune installation requise."
+        "body": "Sous Windows, lancez l’installateur ou double-cliquez sur la version portable — aucune installation requise. Sous macOS, décompressez le téléchargement et double-cliquez sur Install.command (clic droit → Ouvrir si macOS le bloque) ; il copie l’application dans Applications et l’ouvre."
       },
       "analyse": {
         "title": "Commencez l’analyse",

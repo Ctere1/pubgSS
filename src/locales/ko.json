@@ -9,13 +9,14 @@
     "eyebrow": "PUBG 매치 분석",
     "title": "Stream Sniping Detector",
     "lead": "PUBG 매치 기록을 읽어 스트림 스나이핑이 의심되는 패턴을 드러내는 데스크톱 도구입니다 — 반복되는 상대, 매치 중복률, 근접 타임라인.",
-    "download": "Windows용 다운로드",
-    "installer": "설치 파일",
-    "portable": "포터블",
+    "download": "다운로드",
+    "installer": "Windows · 설치 파일",
+    "portable": "Windows · 포터블",
+    "macos": "macOS · 유니버설",
     "sponsor": "GitHub에서 후원하기",
     "latest": "최신 버전",
     "downloads_other": "{{count, number}}회 다운로드",
-    "meta": "Windows 데스크톱 앱 · 설치 버전 또는 포터블 버전"
+    "meta": "Windows 및 macOS · 설치 버전, 포터블 버전 또는 유니버설 앱"
   },
   "overview": {
     "eyebrow": "개요",
@@ -41,7 +42,7 @@
   "installation": {
     "eyebrow": "설치",
     "title": "세 단계로 시작하기",
-    "lead": "현재는 Windows만 지원합니다 — macOS 지원은 추후 추가될 수 있습니다.",
+    "lead": "Windows와 macOS를 지원합니다. macOS 빌드는 Apple의 공증을 받지 않았기 때문에 격리 플래그를 대신 해제해 주는 설치 프로그램이 함께 제공됩니다.",
     "steps": {
       "download": {
         "title": "최신 릴리스 다운로드",
@@ -50,7 +51,7 @@
       },
       "run": {
         "title": "애플리케이션 실행",
-        "body": "설정하려면 설치 파일을 실행하거나, 포터블 버전을 두 번 클릭하세요 — 설치가 필요 없습니다."
+        "body": "Windows에서는 설치 프로그램을 실행하거나 포터블 빌드를 두 번 클릭하세요 — 설치가 필요 없습니다. macOS에서는 다운로드한 파일의 압축을 풀고 Install.command를 두 번 클릭하세요(macOS가 차단하면 오른쪽 클릭 → 열기). 앱을 응용 프로그램 폴더에 복사하고 실행합니다."
       },
       "analyse": {
         "title": "분석 시작",

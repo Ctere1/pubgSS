@@ -9,14 +9,15 @@
     "eyebrow": "PUBG maç analizi",
     "title": "Stream Sniping Detector",
     "lead": "PUBG maç geçmişinizi okuyup şüpheli stream sniping davranışının izlerini ortaya çıkaran bir masaüstü uygulaması — tekrar eden rakipler, maç örtüşme oranları ve yakınlık zaman çizelgeleri.",
-    "download": "Windows için indir",
-    "installer": "Kurulumlu",
-    "portable": "Taşınabilir",
+    "download": "İndir",
+    "installer": "Windows · Kurulumlu",
+    "portable": "Windows · Taşınabilir",
+    "macos": "macOS · Evrensel",
     "sponsor": "GitHub'da destekle",
     "latest": "Son sürüm",
     "downloads_one": "{{count, number}} indirme",
     "downloads_other": "{{count, number}} indirme",
-    "meta": "Windows masaüstü uygulaması · Kurulumlu veya taşınabilir sürüm"
+    "meta": "Windows ve macOS · Kurulumlu, taşınabilir veya evrensel sürüm"
   },
   "overview": {
     "eyebrow": "Genel Bakış",
@@ -42,7 +43,7 @@
   "installation": {
     "eyebrow": "Kurulum",
     "title": "Üç adımda hazır",
-    "lead": "Şu an yalnızca Windows destekleniyor; macOS desteği ileride gelebilir.",
+    "lead": "Windows ve macOS. macOS sürümü Apple tarafından noter onaylı değil; bu yüzden karantina işaretini sizin için kaldıran bir kurulum dosyasıyla geliyor.",
     "steps": {
       "download": {
         "title": "Son sürümü indirin",
@@ -51,7 +52,7 @@
       },
       "run": {
         "title": "Uygulamayı çalıştırın",
-        "body": "Kurmak için kurulum dosyasını çalıştırın ya da taşınabilir sürüme çift tıklayın — kurulum gerekmez."
+        "body": "Windows’ta kurulum dosyasını çalıştırın ya da taşınabilir sürüme çift tıklayın — kurulum gerekmez. macOS’ta indirilen dosyayı açıp Install.command’a çift tıklayın (macOS engellerse sağ tık → Aç); uygulamayı Applications klasörüne kopyalayıp açar."
       },
       "analyse": {
         "title": "Analize başlayın",

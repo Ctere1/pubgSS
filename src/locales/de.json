@@ -9,14 +9,15 @@
     "eyebrow": "PUBG-Match-Analyse",
     "title": "Stream Sniping Detector",
     "lead": "Ein Desktop-Tool, das deine PUBG-Matchhistorie ausliest und die Muster hinter vermutetem Stream Sniping sichtbar macht — wiederkehrende Gegner, Match-Überlappungsraten und Näherungsverläufe.",
-    "download": "Für Windows herunterladen",
-    "installer": "Installer",
-    "portable": "Portabel",
+    "download": "Herunterladen",
+    "installer": "Windows · Installer",
+    "portable": "Windows · Portabel",
+    "macos": "macOS · Universal",
     "sponsor": "Auf GitHub unterstützen",
     "latest": "Neueste Version",
     "downloads_one": "{{count, number}} Download",
     "downloads_other": "{{count, number}} Downloads",
-    "meta": "Windows-Desktop-App · Installer- oder Portable-Version"
+    "meta": "Windows und macOS · Installer-, Portable- oder Universal-Version"
   },
   "overview": {
     "eyebrow": "Überblick",
@@ -42,7 +43,7 @@
   "installation": {
     "eyebrow": "Installation",
     "title": "In drei Schritten einsatzbereit",
-    "lead": "Derzeit nur Windows — macOS-Unterstützung könnte später folgen.",
+    "lead": "Windows und macOS. Die macOS-Version ist nicht von Apple notarisiert und enthält deshalb ein Installationsprogramm, das die Quarantäne-Markierung für Sie entfernt.",
     "steps": {
       "download": {
         "title": "Neueste Version herunterladen",
@@ -51,7 +52,7 @@
       },
       "run": {
         "title": "Anwendung starten",
-        "body": "Starte den Installer zur Einrichtung oder doppelklicke auf die Portable-Version — keine Installation nötig."
+        "body": "Unter Windows den Installer ausführen oder die Portable-Version doppelklicken — keine Installation nötig. Unter macOS das Archiv entpacken und Install.command doppelklicken (Rechtsklick → Öffnen, falls macOS blockiert); es kopiert die App nach „Programme“ und öffnet sie."
       },
       "analyse": {
         "title": "Analyse starten",
